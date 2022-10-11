@@ -69,7 +69,14 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
         }
    
     if(createPari===undefined){
-        return <></>
+        return (
+            <>
+            <Header></Header>
+                <div className="bgBet"></div>
+                <div className="col"><button className="send" onClick={pushBdd}>Envoyer </button>
+                </div>
+            </>
+        )
     }
     function findOpponents (){
         let tmp = [...createPari]

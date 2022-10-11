@@ -9,7 +9,10 @@ exports.SignIn = async (req,res) => {
 
     const authorizedEmail =[
         "maximedurville95300@gmail.com",
-        "admin@admin.com"
+        "admin@admin.com",
+        "fx.matignon@gmail.com",
+        "christine.matignon78@gmail.com",
+        "A.germany@ag-consulting-expertise.fr "
     ]
 
     const {email,pseudo, societe,password,confirmPassword}= req.body
