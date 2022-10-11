@@ -1,1 +1,1 @@
-exports.server = "http://" + window.location.hostname 
+exports.server = "https://worldcupback.vercel.app/"
