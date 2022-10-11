@@ -1,1 +1,1 @@
-exports.server = "https://" + window.location.hostname 
+exports.server = "http://" + window.location.hostname 
