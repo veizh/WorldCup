@@ -2,7 +2,7 @@
     "version":2,
     "builds":[
         {
-            "src":"./world-cup/index.js",
+            "src":"./world-cup//srcindex.js",
             "use":"@vercel/node"
 
         }
