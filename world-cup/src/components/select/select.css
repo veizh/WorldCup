@@ -1,0 +1,75 @@
+.containerSelect {
+  height: 50px;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  max-width: 300px;
+}
+.containerSelect .selected, .containerSelect .select-box .option, .containerSelect label {
+  padding: 8px 15px;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
+.containerSelect .selected {
+  order: 0;
+  background-color: white;
+  color: black;
+  margin-bottom: 5px;
+  position: relative;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.54);
+}
+.containerSelect .selected.active::after {
+  transform: rotateX(180deg) rotateY(180deg);
+  top: -5px;
+}
+.containerSelect .selected::after {
+  content: "";
+  fill: white;
+  background-image: url("../../images/down.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 30px;
+  right: 10px;
+  top: 4px;
+  transition: all 0.8s;
+}
+.containerSelect .select-box {
+  display: flex;
+  flex-direction: column;
+}
+.containerSelect .select-box .options-container {
+  z-index: 6;
+  background-color: rgb(255, 255, 255);
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s;
+  order: 1;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.54);
+}
+.containerSelect .select-box .options-container.active {
+  max-height: 500px;
+  opacity: 1;
+  transition: all 0.4s;
+}
+.containerSelect .select-box .option {
+  border-bottom: 1px solid black;
+}
+.containerSelect .select-box .option:last-child {
+  border-bottom: none;
+}
+.containerSelect .select-box .option:hover {
+  background-color: #ed6d0b;
+  color: white;
+}
+.containerSelect .select-box .radio {
+  display: none;
+}
+.containerSelect .select-box label {
+  cursor: pointer;
+}/*# sourceMappingURL=select.css.map */

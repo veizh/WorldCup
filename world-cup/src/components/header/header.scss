@@ -1,0 +1,43 @@
+@import '../../styles/mixins/responsive';
+header{
+    width: 100vw;
+    bottom: 0;
+    position: fixed;
+    height: 5vh;
+    background-color: white;
+    z-index: 8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 11%;
+    @include tablet{
+        bottom: unset;
+        top:0;
+        justify-content: space-between;
+    }
+    a{
+        border: none;
+        background-color: white;
+        font-size:25px;
+        color: #ed6d0b;
+        text-decoration: none;
+        @include tablet{
+            &::after{
+                content: 'Acceuil';
+                font-family: 'Montserrat', sans-serif;
+                margin-left: 15px;
+            }
+        }
+    }
+    .logo{
+        display: none;
+        @include tablet {
+            display: block;
+            background-image: url("../../images/AgName.png");
+            height: 4vh;
+            aspect-ratio: 900/150;
+            z-index: 9;
+            background-size: cover;
+        }
+    }
+}

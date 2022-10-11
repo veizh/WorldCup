@@ -1,0 +1,66 @@
+.titlePari {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin: 1vh 0;
+  color: white;
+}
+
+.send {
+  border: none;
+  border-radius: 8px;
+  margin-top: 5vh;
+  height: 50px;
+  font-size: 25px;
+  width: 50%;
+  margin: 5vh auto;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+.send:hover {
+  transform: scale(1.05);
+}
+
+.containerPari {
+  width: 95vw;
+  max-width: 500px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+  border-collapse: collapse;
+}
+.containerPari .cell {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33.33333%;
+  height: 100%;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  border-top: #808080 1px solid;
+  border-bottom: #808080 1px solid;
+  border-radius: 0px;
+  box-shadow: 0px 10px 13px -9px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+.containerPari .cell.nul {
+  border-inline: 1px solid black;
+}
+.containerPari .cell.A {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-left: #808080 1px solid;
+}
+.containerPari .cell.B {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-right: #808080 1px solid;
+}
+.containerPari .cell.selected {
+  box-shadow: 0px 10px 13px -15px #000000, 5px 5px 5px 5px rgba(0, 0, 0, 0);
+  color: black;
+  background-color: #ed6d0b;
+}/*# sourceMappingURL=pariPoule.css.map */

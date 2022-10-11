@@ -1,0 +1,126 @@
+@import '../../styles/mixins/responsive';
+.col{
+    flex-direction: column;
+    display: flex;
+    margin: 3.5vh AUTO 7vh AUTO;
+    gap: 0;
+        @include tablet{
+            margin: 7vh auto 0 auto; 
+        }
+}
+.col{
+    z-index: 2;
+}
+.filtre{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    z-index: 3;
+        .boxMatch{
+            background-color: white;
+            max-width: 600px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: fit-content;
+            background-color: white;
+            width: 90%;
+            max-width: 800px;
+            align-items: center;
+            gap: 4vh;
+            padding: 40px 50px;
+            @include desktop{
+                flex-direction: row;
+            }
+                button{
+                    width:100%;
+                    border: none;
+                    background-color: white;
+                    padding: 10px;
+                    font-size: 22px;
+                    -webkit-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.54); 
+                    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.54);
+                    cursor: pointer;
+                }
+        }
+}
+.containerElim{
+z-index: 1;
+width: 100%;
+display: flex;
+justify-content: space-around;
+flex-direction: column;
+align-items: center;
+padding: 15px 10px 20px 10px;
+height: fit-content;  
+&.finale{
+        margin-bottom: 40px;
+    }
+@include desktop{
+    width: 900px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+  
+   
+    .match{
+        text-align: center;
+        color: black;
+        cursor: pointer;
+        margin-top: 2vh;
+        font-size: 22px;
+        max-width: 400px;
+        font-family: 'Montserrat', sans-serif;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background-color: white;
+            i{  color: #ed6d0b;
+                font-size: 30px;
+                display: flex;
+                align-items: center;
+            }
+        
+    }
+    .title{
+        font-weight: 600;
+        color: white;
+        font-size: 29px;
+        margin: 1vh 0;
+        width: 100%;
+        font-family: 'Montserrat', sans-serif;
+        
+    }
+    .containerPairing{
+        display: none;
+        &.active{
+            display: block;
+        }
+        
+        @include desktop{
+            flex-direction: row;
+            justify-content: center;
+        }
+            &:last-child{
+                border-bottom:none;
+            }
+           
+            
+             span{
+                display: flex;
+                align-items: center;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 22px;
+             }
+    }
+}

@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.backgroundHome {
+  background-image: url("../../images/vestiaire.webp");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  position: absolute;
+  background-position: center;
+  filter: contrast(0.9) brightness(1);
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+.page .logo {
+  margin-top: 2vh;
+  width: 80vw;
+  aspect-ratio: 900/350;
+  max-width: 500px;
+  background-image: url("../../images/logo.png");
+  background-size: cover;
+  background-position: center;
+}
+.page span {
+  position: absolute;
+  bottom: 8vh;
+  font-weight: 600;
+  color: #787b79;
+  font-size: 38px;
+  justify-self: flex-end;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  width: 80%;
+}
+@media (min-width: 768px) {
+  .page span {
+    font-size: 47px;
+    bottom: 15vh;
+  }
+}
+.page .buttonContainer {
+  margin-top: 3vh;
+  height: auto;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .page .buttonContainer {
+    margin-top: 1.5vh;
+  }
+}
+.page .buttonContainer .navbtn {
+  width: 250px;
+  background-color: #ed6e0b;
+  margin-bottom: 18px;
+  font-weight: 400;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}/*# sourceMappingURL=accueil.css.map */

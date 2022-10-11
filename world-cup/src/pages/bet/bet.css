@@ -1,0 +1,102 @@
+.col {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2vh;
+}
+
+.bgBet {
+  position: fixed;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../images/test.jpeg");
+  background-position: center;
+  background-size: cover;
+  filter: brightness(0.5);
+}
+
+.grid {
+  z-index: 2;
+  display: flex;
+  gap: 3vh;
+  width: 100%;
+  max-width: 800px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  justify-content: center;
+  margin-bottom: 7vh;
+}
+@media (min-width: 768px) {
+  .grid {
+    margin-bottom: 0;
+    margin-top: 5vh;
+  }
+}
+@media (min-width: 992px) {
+  .grid {
+    gap: 5vh;
+  }
+}
+.grid .subtitle {
+  width: 100vw;
+  color: whitesmoke;
+  font-family: "Montserrat", sans-serif;
+  padding: 40px 0 0 0;
+  text-align: center;
+  font-size: 38px;
+}
+.grid .subtitle2 {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  color: #ed6d0b;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgba(245, 245, 245, 0) 10%, rgb(245, 245, 245) 30%, rgb(245, 245, 245) 70%, rgba(245, 245, 245, 0) 90%);
+  font-family: "Montserrat", sans-serif;
+  padding: 10px 0 10px 0px;
+  font-size: 22px;
+}
+@media (min-width: 992px) {
+  .grid .subtitle2 {
+    font-size: 26px;
+    padding: 20px 0 20px 0px;
+  }
+}
+.grid .subtitle2 .txt {
+  width: 50%;
+  text-align: center;
+}
+.grid a {
+  font-family: "Montserrat", sans-serif;
+  background-color: white;
+  color: #ed6d0b;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 600;
+  padding: 12px 15px;
+  text-align: center;
+  border: solid 1px black;
+  width: 100%;
+  max-width: 370px;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.12);
+  transition: 0.5s;
+}
+.grid a i {
+  font-size: 28px;
+  margin-left: 15px;
+  color: #ed6d0b;
+  display: none;
+}
+.grid a.done > i {
+  display: inline;
+}
+.grid a:hover {
+  transform: scaleX(1.05) scaleY(1.1);
+  transition: 0.5s;
+}/*# sourceMappingURL=bet.css.map */

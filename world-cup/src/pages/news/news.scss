@@ -1,0 +1,121 @@
+@import '../../styles/mixins/responsive';
+.backgroundNews{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../images/bgNews.png');
+    filter: brightness(0.7);
+}
+.containerPost{
+    z-index: 2;
+    width: 90%;
+    .allPost{
+        padding-bottom: 30px;
+    }
+  
+    h1{
+        text-align: center;
+        color: whitesmoke;
+        font-size: 29px;
+        margin: 5vh ;
+        font-family: 'Montserrat', sans-serif;
+        
+        @include desktop{
+            font-size: 52px;
+        }
+
+    }
+    .suite{
+        cursor: pointer;
+    }
+    
+    .post{
+        max-width: 600px;
+        background-color: whitesmoke;
+        border-bottom: 3px solid #ed6e0b;
+        border-right: 3px solid #ed6e0b;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px 12px;
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 8px;
+        overflow: hidden;
+        -webkit-box-shadow: 6px 4px 15px 1px rgba(0,0,0,0.44); 
+        box-shadow: 6px 4px 15px 1px rgba(0,0,0,0.44);
+        @include tablet{
+            margin: 20px auto;
+            aspect-ratio: unset;
+        }
+        &.open{
+            aspect-ratio: unset;
+        }
+        &.open>button{
+            display: none;
+        }
+        &.open>.msg{
+            display: block;
+        }
+        &.open>.date{
+            display: block;
+        }
+        &.open>.title{
+            border-bottom: 1px solid #ed6e0b;
+            margin-bottom: 0;
+        }
+            button{
+                -webkit-box-shadow: 4px 5px 15px 6px rgba(0,0,0,0.50); 
+                box-shadow: 4px 5px 15px 6px rgba(0,0,0,0.50);
+                width: 100%;
+                height: 35px;
+                font-family: 'Montserrat', sans-serif;
+                background-color: rgba(255, 255, 255, 0.678);
+                color: #ed6e0b;
+                font-size: 18px;
+                font-weight: 500;
+                backdrop-filter: blur(1px);
+                left: 0;
+                position: absolute;
+                border: none;
+                bottom: 0;
+                @include desktop{
+                    display: none;
+                }
+            }
+            
+            .title{
+                margin-bottom: 25px;
+            margin-top: 0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 29px;
+            color: #ed6e0b;
+            padding: 0 10px 10px 10px;
+            @include desktop{
+                border-bottom: 1px solid #ed6e0b;
+                margin-bottom: 0;
+                font-size: 34px;
+            }
+            }
+            .msg{
+                font-size: 18px;
+                padding: 15px 10px;
+                line-height: 1.25;
+                display: none;
+                @include desktop{
+                    display: block;
+                    font-size: 20px;
+                }
+            }
+            .date{
+                display: none;
+                border-top: 1px solid #ed6e0b;
+                padding-top: 10px;
+                text-align: end;
+                @include desktop{
+                    display: block;
+                }
+            }
+    }
+}

@@ -1,0 +1,29 @@
+.inputContainer {
+  width: 100%;
+  padding: 5px 10px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+}
+.inputContainer .labelForm {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  margin-left: 4px;
+}
+.inputContainer .inputForm {
+  font-size: 15px;
+  font-weight: 500;
+}
+.inputContainer .inputForm:focus-visible {
+  outline: gray;
+}
+.inputContainer .errormsg {
+  color: red;
+  font-size: 15px;
+  display: none;
+  margin-left: 4px;
+}
+.inputContainer input:invalid[focused=true] ~ .errormsg {
+  display: block;
+}/*# sourceMappingURL=FormInput.css.map */
