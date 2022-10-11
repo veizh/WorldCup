@@ -3,6 +3,7 @@ import React from 'react'
 import { server } from '../../utils/servers';
 import { useState } from 'react';
 import  Post  from "../../components/posts/_Post"
+import Header from '../../components/header/_Header';
 
 
     
@@ -33,7 +34,8 @@ const PostFetched = () => {
 
 const News = () => {
 
-    return (<>
+    return (<>  
+                <Header />
                 <div className="backgroundNews"></div>
                 <div className="containerPost">
                     <h1>L'info sur la coupe du monde</h1>

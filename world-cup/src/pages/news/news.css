@@ -7,8 +7,15 @@
 }
 
 .containerPost {
+  margin-bottom: 7vh;
   z-index: 2;
   width: 90%;
+}
+@media (min-width: 992px) {
+  .containerPost {
+    margin-bottom: 0;
+    margin-top: 7vh;
+  }
 }
 .containerPost .allPost {
   padding-bottom: 30px;
