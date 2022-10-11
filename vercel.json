@@ -2,14 +2,14 @@
     "version":2,
     "builds":[
         {
-            "src":"./world-cup//srcindex.js",
+            "src":"./world-cup/src/index.js",
             "use":"@vercel/node"
 
         }
     ],
     "routes":[
         {
-            "src":"/(.*)",
+            "src":"/world-cup/(.*)",
             "dest":"/"
         }
     ]
