@@ -10,7 +10,7 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
     const poule =useParams()
     const [createPari,setPari] = useState(undefined)
     const Navigate = useNavigate()
-    const [clicked,setClicked] = useState(0)
+    const [clicked,setClicked] = useState(null)
     function pushBdd(){
         setClicked(clicked+1)
     }
@@ -18,6 +18,7 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
    
 
     useEffect( ()=>{
+        if(clicked===null) return
         const data = document.querySelectorAll('.containerPari');
         
         let test = 0
