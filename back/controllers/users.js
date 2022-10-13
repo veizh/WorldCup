@@ -90,7 +90,7 @@ exports.verifyJWT = async (req, res) => {
     let players = await userSchema.find()
     const result = req.body
    
-    players.map(async (e)=>{
+   await players.map(async (e)=>{
     
       
        console.log("user :" +e._id);
@@ -106,7 +106,7 @@ exports.verifyJWT = async (req, res) => {
          (e.pari_h && e.pari_h[result.idMatch] && e.pari_h[result.idMatch]===result.result)  ){
       console.log('Gagné');
       const newPoint =parseInt(e.point) + parseInt(result.point)
-      await userSchema.updateOne({_id:e._id},{$set:{point:newPoint}})
+       userSchema.updateOne({_id:e._id},{$set:{point:newPoint}})
       console.log(e.point - parseInt(result.point) + " ~ to ~ " + e.point)
     }
     else {
