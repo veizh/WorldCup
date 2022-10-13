@@ -1,2 +1,1 @@
-//exports.server = "https://worldcupback.vercel.app"
-exports.server = 'http://localhost:3500'
+exports.server = "https://worldcupback.vercel.app"
