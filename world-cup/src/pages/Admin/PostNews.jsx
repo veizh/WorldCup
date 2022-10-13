@@ -44,13 +44,21 @@ const PostNews = () => {
     return(
             <div className="postArticle">
                 <form>
-                    {inputs.map((input) => (
+                    {
                     <FormInput 
-                        key={input.id} 
-                        {...input} 
+                        key={inputs[0].id} 
+                        {...inputs[0]}
+                        className={inputs[0].name +" Post"} 
                         value={values[values.name]}
                          onChange={onChange} />  
-                    ))}
+                    }
+                    <textarea name={inputs[1].name} 
+                    className={inputs[1].name +" Post"} 
+                    id={inputs[1].id} 
+                    onChange={onChange}
+                    value={values[inputs[1].name]}
+                    cols="30" 
+                    rows="10"></textarea>
                     <button onClick={handleSubmit}>post</button>
                 </form>
             </div>

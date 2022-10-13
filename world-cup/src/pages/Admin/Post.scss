@@ -2,4 +2,19 @@
     button{
         cursor: pointer;
     }
+    .title{
+        &.Post{
+            width: 100%;
+        }
+    }
+    .desc{
+        &.Post{
+        height: 400px;
+        background-color: rgba(237, 109, 11, 0.6235294118);
+        border-radius: 8px;
+        resize: none;
+        width: 100%;
+
+        }
+    }
 }

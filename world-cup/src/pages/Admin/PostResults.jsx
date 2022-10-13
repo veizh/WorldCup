@@ -33,6 +33,13 @@ const inputs=[
         type:"text",
         required:true,
         label:"resultat"
+    },
+    {
+        id:3,
+        name:"nbPoint",
+        type:"number",
+        required:true,
+        label:"nombre de point"
     }
 ]
     return(
