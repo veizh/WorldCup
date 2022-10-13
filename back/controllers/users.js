@@ -88,7 +88,7 @@ exports.verifyJWT = async (req, res) => {
 
   exports.updateResult = async (req,res) => {
     let players = await userSchema.find()
-    const result = await req.body
+    const result =  req.body
     console.log(result);
    await players.map(async (e)=>{
     
