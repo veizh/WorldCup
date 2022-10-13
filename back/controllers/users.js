@@ -1,8 +1,6 @@
 const userSchema = require("../models/user")
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken');
-const { create } = require("../models/user");
-const { json } = require("body-parser");
 
 exports.SignIn = async (req,res) => {
     console.log("requete SignIn recu");
@@ -90,8 +88,9 @@ exports.verifyJWT = async (req, res) => {
 
   exports.updateResult = async (req,res) => {
     let players = await userSchema.find()
+    console.log(req.body);
     players.map((e)=>{
      console.log(e.point);
     })
-    .then(res=>res.status(200))
+    res=>res.status(200)
   }
