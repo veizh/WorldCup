@@ -1,17 +1,26 @@
 import React from "react"
 import { useState } from "react"
 import FormInput from "../../components/inputs/_FormInput"
+import { server } from "../../utils/servers"
 import "./Post.css"
-
 
 const PostResults =()=> {
     const[values, setValues] = useState({
     idMatch:null,
-    resultat:null
-    
+    result:null,
+    point:null
 })  
 const handleSubmit = (e) => {
     e.preventDefault()
+        fetch(server +"/result/create",{
+            method:"POST",
+            headers:{'Content-Type':'application/json' },
+            body:JSON.stringify(values)
+        })
+        .then(res => res.json({msg:"test"}))
+
+       // Navigate('/rating')
+    
     console.log(values)
 }
 const onChange = (e) =>{
@@ -29,19 +38,21 @@ const inputs=[
     },
     {
         id:2,
-        name:"resultat",
+        name:"result",
         type:"text",
         required:true,
         label:"resultat"
     },
     {
         id:3,
-        name:"nbPoint",
+        name:"point",
         type:"number",
         required:true,
         label:"nombre de point"
     }
 ]
+
+
     return(
         <div className="postArticle">
         <form>

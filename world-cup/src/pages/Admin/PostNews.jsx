@@ -3,13 +3,14 @@ import { useState } from "react"
 import FormInput from "../../components/inputs/_FormInput"
 import "./Post.css"
 import { server } from '../../utils/servers';
-
+import { Navigate, useNavigate } from "react-router-dom";
 
 const PostNews = () => {
     const[values, setValues] = useState({
         title:null,
-        desc:null
+        desc:""
     })  
+    const Navigate = useNavigate()
     const onChange = (e) =>{
         setValues({...values,[e.target.name]:e.target.value})
 
@@ -37,7 +38,7 @@ const PostNews = () => {
             body:JSON.stringify(values)
         })
         .then(res => res.json({msg:"test"}))
-
+        Navigate('/News')
         /*rediriger aprés le fetch vers news (navigate)*/ 
     }
 
@@ -53,7 +54,7 @@ const PostNews = () => {
                          onChange={onChange} />  
                     }
                     <div className="inputContainer">
-                       <label for="inputs[1].name" className="labelForm" >Description</label>
+                       <label htmlFor="inputs[1].name" className="labelForm" >Description</label>
                     <textarea name={inputs[1].name} 
                     className={inputs[1].name +" Post inputForm"} 
                     id={inputs[1].id} 

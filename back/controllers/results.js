@@ -1,13 +1,10 @@
-const postSchema = require("../models/results")
+const ResultSchema = require("../models/results")
 
 exports.createResult = (req,res)=>{
     console.log('post recu')
-    const newPost = new ResultSchema({...req.body})
-    newPost.save()
+    const newResult = new ResultSchema({...req.body})
+    newResult.save()
     .then(()=> res.status(200).json())
-        return res.status(200).json({msg:"post created"})
+        return res.status(200).json({msg:"result push"})
 }
-exports.getPosts = async (req,res)=>{
-    const ArrayPost = await postSchema.find({});
-    res.json(ArrayPost) 
-}
+

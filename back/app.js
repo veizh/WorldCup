@@ -9,6 +9,7 @@ var equipeRouter = require('./routes/equipe');
 var postRouter = require('./routes/post');
 var matchRouter = require('./routes/match');
 var parisRouter = require('./routes/paris');
+var resultsRouter = require('./routes/results');
 
 require("dotenv").config();
 
@@ -36,6 +37,8 @@ app.use('/equipe', equipeRouter);
 app.use('/post', postRouter);
 app.use('/match', matchRouter);
 app.use('/paris', parisRouter);
+app.use('/results', resultsRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

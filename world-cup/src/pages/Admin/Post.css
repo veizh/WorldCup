@@ -4,6 +4,7 @@
 .postArticle .title.Post {
   width: 100%;
   margin: 3vh 0;
+  color: black;
 }
 .postArticle .desc.Post {
   margin-top: 3vh;

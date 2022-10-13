@@ -3,5 +3,5 @@ const resultsCtrl = require('../controllers/results');
 var router = express.Router();
 
 /* GET equipe listing. */
-router.post('/create',postCtrl.createResult );
+router.post('/create',resultsCtrl.createResult );
 module.exports = router;
