@@ -47,7 +47,9 @@ const Selectbox = (props) =>{
 
                 <div className="select-box">
                     <div className={ active?'options-container active':'options-container'}>
-                        {settings?settings.map(e=><div key={e.equipe} onClick={()=>{labelSelected(e.equipe)}} className="option" id={e.equipe}><input type="radio" className="radio" name={e.equipe} id={e.equipe}/> <label htmlFor={e.equipe}>{e.equipe}</label>  </div>):false}
+                        {settings?settings.map(e=><div key={e.equipe} onClick={()=>{labelSelected(e.equipe)}} className="option" id={e.equipe}>
+                            <input type="radio" className="radio" name={e.equipe} id={e.equipe}/>
+                             <label htmlFor={e.equipe}>{e.equipe}</label>  </div>):false}
                         
                     </div>
                 </div> 
