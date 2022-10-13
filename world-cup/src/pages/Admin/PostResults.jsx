@@ -9,6 +9,7 @@ const PostResults =()=> {
     idMatch:null,
     result:null,
     point:null
+
 })  
 const handleSubmit = (e) => {
     e.preventDefault()
@@ -25,7 +26,7 @@ const handleSubmit = (e) => {
             headers:{'Content-Type':'application/json' },
             body:JSON.stringify(values)
         })
-        .then(res => res.json({msg:"ok"}))
+        .then(res => res.json({msg:"oki"}))
        // Navigate('/rating')
     
     console.log(values)
