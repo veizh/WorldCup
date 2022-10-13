@@ -21,7 +21,7 @@ const handleSubmit = (e) => {
         .then(res => res.json({msg:"test"}))
         
         
-        fetch(server +"/users/update",{
+        fetch(server +"/users/updatePoints",{
             method:"POST",
             headers:{'Content-Type':'application/json' },
             body:JSON.stringify(values)
