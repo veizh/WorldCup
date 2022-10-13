@@ -3,7 +3,7 @@ import { useState } from "react"
 import FormInput from "../../components/inputs/_FormInput"
 import "./Post.css"
 import { server } from '../../utils/servers';
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const PostNews = () => {
     const[values, setValues] = useState({

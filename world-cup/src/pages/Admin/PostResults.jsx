@@ -12,13 +12,20 @@ const PostResults =()=> {
 })  
 const handleSubmit = (e) => {
     e.preventDefault()
-        fetch(server +"/result/create",{
+        fetch(server +"/results/create",{
             method:"POST",
             headers:{'Content-Type':'application/json' },
             body:JSON.stringify(values)
         })
         .then(res => res.json({msg:"test"}))
-
+        
+        
+        fetch(server +"/users/update",{
+            method:"POST",
+            headers:{'Content-Type':'application/json' },
+            body:JSON.stringify(values)
+        })
+        .then(res => res.json({msg:"test"}))
        // Navigate('/rating')
     
     console.log(values)

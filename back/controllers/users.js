@@ -87,3 +87,11 @@ exports.verifyJWT = async (req, res) => {
 
     return res.status(200).json(FindAllPlayer())
   }
+
+  exports.updateResult = async (req,res) => {
+    let players = await userSchema.find()
+    players.map((e)=>{
+     console.log(e.point);
+    })
+    .then(res=>res.status(200))
+  }
