@@ -108,11 +108,9 @@ exports.verifyJWT = async (req, res) => {
       const newPoint =parseInt(e.point) + parseInt(result.point)
        userSchema.updateOne({_id:e._id},{$set:{point:newPoint}})
       console.log(e.point - parseInt(result.point) + " ~ to ~ " + e.point)
-      return 
     }
     else {
       console.log('Perdu');
-      return 
     }
     })
     return await res.status(200).json({msg:"la mise a jour des points est fini"})
