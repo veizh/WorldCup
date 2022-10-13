@@ -5,6 +5,6 @@ exports.createResult = (req,res)=>{
     const newResult = new ResultSchema({...req.body})
     newResult.save()
     .then(()=> res.status(200).json())
-        return res.status(200).json({msg:"result push"})
+        return res.status(200).json({msg:"result pushed"})
 }
 
