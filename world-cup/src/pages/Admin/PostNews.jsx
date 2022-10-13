@@ -52,13 +52,17 @@ const PostNews = () => {
                         value={values[values.name]}
                          onChange={onChange} />  
                     }
+                    <div className="inputContainer">
+                       <label for="inputs[1].name" className="labelForm" >Description</label>
                     <textarea name={inputs[1].name} 
-                    className={inputs[1].name +" Post"} 
+                    className={inputs[1].name +" Post inputForm"} 
                     id={inputs[1].id} 
                     onChange={onChange}
                     value={values[inputs[1].name]}
                     cols="30" 
-                    rows="10"></textarea>
+                    rows="10"></textarea>  
+                    </div>
+                   
                     <button onClick={handleSubmit}>post</button>
                 </form>
             </div>
