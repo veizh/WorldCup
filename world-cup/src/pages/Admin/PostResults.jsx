@@ -22,8 +22,10 @@ const handleSubmit = (e) => {
         
         
         fetch(server +"/users/updatePoints",{
+            
             method:"POST",
-            headers:{'Content-Type':'application/json' },
+            mode: 'no-cors',
+            headers:{'Content-Type':'application/json', },
             body:JSON.stringify(values)
         })
         .then(res => res.json({msg:"oki"}))
