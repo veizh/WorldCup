@@ -28,7 +28,6 @@ const handleSubmit = (e) => {
             headers:{'Content-Type':'application/json', },
             body:JSON.stringify(values)
         })
-        .then(res => res.status(200).json({msg:"oki"}))
        // Navigate('/rating')
     
     console.log(values)
