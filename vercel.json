@@ -15,7 +15,7 @@
     ],
     "headers": [
           {
-            "source": "/https://worldcupback.vercel.app/(.*)",
+            "source": "https://worldcupback.vercel.app/(.*)",
             "headers": [
               { "key": "Access-Control-Allow-Credentials", "value": "true" },
               { "key": "Access-Control-Allow-Origin", "value": "*" },
