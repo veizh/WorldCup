@@ -29,7 +29,7 @@ exports.createResult = async (req,res)=>{
       console.log(parseInt(result.point));
 
       console.log(e.point - parseInt(result.point) + " ~ to ~ " + e.point  )
-       userSchema.updateOne({_id:e._id},{$set:{point:newPoint}})
+      await userSchema.updateOne({_id:e._id},{$set:{point:newPoint}})
       console.log(e.point);
         }
         else {

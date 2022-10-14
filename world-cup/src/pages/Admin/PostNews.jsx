@@ -37,7 +37,7 @@ const PostNews = () => {
             headers:{'Content-Type':'application/json' },
             body:JSON.stringify(values)
         })
-        .then(res => res.json({msg:"test"}))
+        .then(res => res.json({msg:"ok"}))
         Navigate('/News')
         /*rediriger aprés le fetch vers news (navigate)*/ 
     }
