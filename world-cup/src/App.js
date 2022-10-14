@@ -20,7 +20,7 @@ function App({ children }) {
     const pathName = window.location.pathname.toLowerCase();
     if (localStorage.getItem("JWT")) {
       
-      fetch(server + "/users/auth", { headers: addHeaderJWT() }).then(async (res) => {
+      fetch(server + "/users/auth", { mode:"cors",headers: addHeaderJWT() }).then(async (res) => {
         if (res.ok) {
           setStatut(await res.json())
           if ( pathName === "/login" || pathName === "/" || pathName === "/signin"   ) {
