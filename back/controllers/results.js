@@ -24,6 +24,10 @@ exports.createResult = async (req,res)=>{
        console.log("cet user gagne : " + result.point +" points.");
 
       const newPoint =parseInt(e.point) + parseInt(result.point)
+      console.log(newPoint);
+      console.log(parseInt(e.point));
+      console.log(parseInt(result.point));
+
       console.log(e.point - parseInt(result.point) + " ~ to ~ " + e.point  )
        userSchema.updateOne({_id:e._id},{$set:{point:newPoint}})
       console.log(e.point);
