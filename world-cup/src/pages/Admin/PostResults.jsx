@@ -12,12 +12,12 @@ const PostResults =()=> {
 
 })  
 
-const handleSubmit = async (e) => {
+const handleSubmit =  (e) => {
     e.preventDefault()
     console.log(values)
-         fetch(server +"/results/create",{
+          fetch(server +"/results/create",{
             method:"POST",
-            headers:{'Content-Type':'application/json','Access-Control-Allow-Origin': '*' },
+            headers:{'Content-Type':'application/json'},
             body:JSON.stringify(values)
         })
         .then(res => res.json({msg:"test"}))
