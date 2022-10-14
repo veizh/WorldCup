@@ -20,7 +20,6 @@ const handleSubmit = async (e) => {
             body:JSON.stringify(values)
         })
         .then(res => res.json({msg:"test"}))
-        updateScore()
         
         
        // Navigate('/rating')
