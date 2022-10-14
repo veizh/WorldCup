@@ -17,7 +17,7 @@ const handleSubmit = async (e) => {
     console.log(values)
          fetch(server +"/results/create",{
             method:"POST",
-            headers:{'Content-Type':'application/json' },
+            headers:{'Content-Type':'application/json','Access-Control-Allow-Origin': '*' },
             body:JSON.stringify(values)
         })
         .then(res => res.json({msg:"test"}))

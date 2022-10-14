@@ -16,7 +16,7 @@ exports.postParis = async (req,res) =>{
     console.log(bet);
     const userId =req._id
     const pari = "pari_" +req.query.poule
-    const obj = {}
+    const obj = { }
     obj[pari]=bet
    await usersSchema.updateOne({_id:userId},{$set:obj});
 
