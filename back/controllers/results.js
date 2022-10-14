@@ -9,7 +9,7 @@ exports.createResult = async (req,res)=>{
     const result =  await req.body
     console.log(result);
     console.log(req.body);
-    players.map(async (e)=>{
+    players.map( (e)=>{
       
        console.log("user :" +e._id);
        console.log(e.pari_a);
