@@ -17,7 +17,6 @@ const handleSubmit = async (e) => {
     console.log(values)
          fetch(server +"/results/create",{
             method:"POST",
-            mode:"cors",
             headers:{'Content-Type':'application/json' },
             body:JSON.stringify(values)
         })
