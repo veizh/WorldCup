@@ -11,9 +11,9 @@ const PostResults =()=> {
     point:null
 
 })  
-const handleSubmit = (e) => {
+const handleSubmit = async (e) => {
     e.preventDefault()
-        fetch(server +"/results/create",{
+        await fetch(server +"/results/create",{
             method:"POST",
             headers:{'Content-Type':'application/json' },
             body:JSON.stringify(values)
