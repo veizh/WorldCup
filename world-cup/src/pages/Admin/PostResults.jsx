@@ -15,7 +15,6 @@ async function updateScore (){
     await fetch(server +"/users/updatePoints",{
             
         method:"POST",
-        mode: 'no-cors',
         headers:{'Content-Type':'application/json', },
         body:JSON.stringify(values)
     })
