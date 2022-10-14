@@ -21,7 +21,7 @@ const handleSubmit = async (e) => {
         .then(res => res.json({msg:"test"}))
         
         
-        fetch(server +"/users/updatePoints",{
+        await fetch(server +"/users/updatePoints",{
             
             method:"POST",
             mode: 'no-cors',
