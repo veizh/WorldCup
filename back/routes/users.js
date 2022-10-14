@@ -7,5 +7,4 @@ router.post('/SignIn', userCtrl.SignIn);
 router.post('/LogIn', userCtrl.LogIn);
 router.get('/auth', userCtrl.verifyJWT);
 router.get('/get', userCtrl.getAll);
-router.post('/updatePoints',userCtrl.updateResult)
 module.exports = router;

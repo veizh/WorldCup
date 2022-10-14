@@ -14,7 +14,8 @@ const PostResults =()=> {
 
 const handleSubmit = async (e) => {
     e.preventDefault()
-        await fetch(server +"/results/create",{
+    console.log(values)
+         fetch(server +"/results/create",{
             method:"POST",
             mode:"cors",
             headers:{'Content-Type':'application/json' },
@@ -25,7 +26,6 @@ const handleSubmit = async (e) => {
         
        // Navigate('/rating')
     
-    console.log(values)
 }
 const onChange = (e) =>{
     setValues({...values,[e.target.name]:e.target.value})
