@@ -11,14 +11,7 @@ const PostResults =()=> {
     point:null
 
 })  
-async function updateScore (){
-    await fetch(server +"/users/updatePoints",{
-            
-        method:"POST",
-        headers:{'Content-Type':'application/json', },
-        body:JSON.stringify(values)
-    })
-}
+
 const handleSubmit = async (e) => {
     e.preventDefault()
         await fetch(server +"/results/create",{
