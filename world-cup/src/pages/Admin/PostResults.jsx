@@ -17,7 +17,8 @@ const handleSubmit =  (e) => {
     console.log(values)
           fetch(server +"/results/create",{
             method:"POST",
-            mode:"no-cors"
+            mode:"cors",
+            referrerPolicy: 'no-referrer',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify(values)
         })
