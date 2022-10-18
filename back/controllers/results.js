@@ -12,8 +12,6 @@ exports.createResult = async (req,res)=>{
     players.map( async (e)=>{
        
         console.log("user : " +e._id);
-        console.log(result);
-         console.log(await e.pari_a[tmp]);
 
        // si l'id du pari existe dans une des tables et que le resultat correspond a celui du user => ajouter des points 
       if((e.pari_test!==null && e.pari_test[tmp] && e.pari_test[tmp]===result.result) ||
