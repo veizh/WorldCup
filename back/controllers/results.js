@@ -2,13 +2,13 @@ const ResultSchema = require("../models/results")
 const userSchema = require("../models/user")
 
 exports.createResult = async (req,res)=>{
+       console.log(req.method);
     console.log('post recu')
     const newResult = new ResultSchema({...req.body})
     newResult.save()
     let players = await userSchema.find()
     const result =  await req.body
    players.map( async (e)=>{
-       
         console.log("user : " +e._id);
         console.log(e.pari_a!==null);
         console.log(e.pari_a[result.idMatch]);
