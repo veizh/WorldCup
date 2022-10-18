@@ -5,8 +5,10 @@ exports.createResult = async (req,res)=>{
     const newResult = new ResultSchema({...req.body})
     newResult.save()
     let players = await userSchema.find()
-    const tmp = result.idMatch
+   
     const result =  await req.body
+     const tmp = result.idMatch
+     
   await  players.map( async (e)=>{
        
         console.log("user : " +e._id);
