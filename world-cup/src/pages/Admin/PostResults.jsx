@@ -15,7 +15,7 @@ const PostResults =()=> {
 const handleSubmit =  (e) => {
     e.preventDefault()
     console.log(values)
-          fetch(server +"/results/create.js",{
+          fetch(server +"/results/create",{
             method:"POST",
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify(values)
