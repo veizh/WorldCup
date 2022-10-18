@@ -17,10 +17,11 @@ const handleSubmit =  (e) => {
     console.log(values)
           fetch(server +"/results/create",{
             method:"POST",
+            mode:"no-cors"
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify(values)
         })
-        .then(res => res.json({msg:"test"}))
+        .then(res => res.json())
         
         
        // Navigate('/rating')
