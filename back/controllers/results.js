@@ -12,7 +12,9 @@ exports.createResult = async (req,res)=>{
     players.map( async (e)=>{
        
         console.log("user : " +e._id);
-        console.log(e.pari_c.cMexiqueArgentine);
+        if(e.pari_c.cMexiqueArgentine){
+        console.log(e.pari_c[result.matchId]);}
+        
        // si l'id du pari existe dans une des tables et que le resultat correspond a celui du user => ajouter des points 
       if((e.pari_test!==null && e.pari_test[tmp] && e.pari_test[tmp]===result.result) ||
          (e.pari_a!==null && e.pari_a[tmp] && e.pari_a[tmp]===result.result) ||
