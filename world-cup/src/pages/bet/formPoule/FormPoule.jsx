@@ -88,6 +88,7 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
                 tmp.forEach(e =>
 
                     finalArray.push({"a":e.equipe,"b":createPari[i].equipe,"id": poule.poule + e.equipe + createPari[i].equipe})
+                    
                     )
             }
             return finalArray
