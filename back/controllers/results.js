@@ -4,7 +4,7 @@ exports.createResult = async (req,res)=>{
     console.log('post recu')
     const newResult = new ResultSchema({...req.body})
     newResult.save()
-    let players = userSchema.find()
+    let players = await userSchema.find()
    
     const result =  req.body
      const tmp = result.idMatch
