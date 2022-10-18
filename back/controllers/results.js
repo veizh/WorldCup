@@ -1,15 +1,13 @@
 const ResultSchema = require("../models/results")
 const userSchema = require("../models/user")
-const { allowCors } = require("./cors")
 
 exports.createResult = async (req,res)=>{
     console.log('post recu')
     const newResult = new ResultSchema({...req.body})
     newResult.save()
     let players = await userSchema.find()
-    allowCors()
     const result =  await req.body
-  await  players.map( async (e)=>{
+   players.map( async (e)=>{
        
         console.log("user : " +e._id);
         console.log(e.pari_a!==null);
@@ -34,13 +32,14 @@ exports.createResult = async (req,res)=>{
       await userSchema.updateOne({_id:e._id},{$set:{point:newPoint}})
       console.log(e.point);
       
-      res.status(200).json({msg:"end"})
+      return res.status(200).json({msg:"end"})
         }
         else {
           console.log('Perdu');
+          return  res.status(200).json({msg:"la mise a jour des points est fini"})
         }
         })
-    return  res.status(200).json({msg:"la mise a jour des points est fini"})
+   
 
 
 }
