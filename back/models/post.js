@@ -1,10 +1,11 @@
 const mongoose = require('mongoose')
 
-var dateNow = new Date()
+var dateNow = Date.now()
+dateNow = dateNow * 1000
 var postSchema = mongoose.Schema({
     title: { type: String, required: true},
     desc:{ type: String, required: true },
-    date:{type:String, default:dateNow.toLocaleDateString("fr")}
+    date:{type:String, default:dateNow}
 })
 
 module.exports = mongoose.model("post",postSchema)

@@ -17,12 +17,13 @@ const Post = (props) => {
   /*  const open= (e)=>{
         console.log(e.closest(".post"))
     }*/
+   const date =new Date(props.date/1000).toLocaleDateString("fr")
    
     return   <div className={`post ${Ar?"open":""}`}  >
                     
                         <h2 className="title">{props.title}</h2>
                         <div className="msg"><p>{props.desc}</p></div>
-                    <div className="date">{props.date}</div>
+                    <div className="date">{date}</div>
                     {<button className="suite" 
                     
                     onClick={()=>setAr(!Ar)}>

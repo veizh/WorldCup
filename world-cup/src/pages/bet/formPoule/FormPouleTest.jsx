@@ -99,10 +99,9 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
                 <Header></Header>
                 <div className="bgBet"></div>
                 <div className="col">
-                <PariPoule a={"Mareseille"} b={"Sporting"} id={"testMareseille/Sporting"} key={"testMareseille/Sporting"}/>
-                <PariPoule a={"Nice"} b={"Slovacko"} id={"testNice/Slovacko"} key={"testNice/Slovacko"}/>
-                <PariPoule a={"Strasbourg"} b={"Lille"} id={"testStrasbourg/Lille"} key={"testtrasbourg/Lille"}/>
-                <PariPoule a={"Tottenham"} b={"Francfort"} id={"testTottenham/Francfort"} key={"testTottenham/Francfort"}/>
+                <label htmlFor="Bestplayer">Quel joueur marquera le plus de buts selon vous ?</label>
+                <input type="text" name="bestPlayer" placeholder="Mbappe" />
+                
                 
                     <button className="send" onClick={pushBdd}>Envoyer </button>
                 </div>

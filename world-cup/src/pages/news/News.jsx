@@ -22,7 +22,9 @@ const PostFetched = () => {
         headers:{"Content-Type":"application/json"}
     })
     .then(res => res.json())
-    .then(res => setPosts(res))
+    .then(res => {
+        setPosts(res)})
+    
     }else{
        return(
             <div className="allPost">

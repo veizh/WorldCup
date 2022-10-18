@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { useState } from "react"
 import { server } from "../../utils/servers"
 import "./rating.css"
@@ -9,6 +9,7 @@ import { useContext } from "react"
 
 
 const ColPlayer =(props)=>{
+
     return(
                 <tr>
                     <td>{props.pseudo}</td>

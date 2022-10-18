@@ -9,5 +9,9 @@ exports.createPost = (req,res)=>{
 }
 exports.getPosts = async (req,res)=>{
     const ArrayPost = await postSchema.find({});
-    res.json(ArrayPost) 
+    const ArrayPostRanged =  ArrayPost.sort((a,b) =>  b.date-a.date)
+    console.log(ArrayPost);
+    console.log(ArrayPostRanged);
+
+    res.json(ArrayPostRanged) 
 }

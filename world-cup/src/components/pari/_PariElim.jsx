@@ -3,6 +3,7 @@ import { createContext } from "react"
 import Selectbox from "../select/_Select"
 import './pariElim.css'
 import { server } from '../../utils/servers';
+import { addHeaderJWT } from "../../utils/header";
 
 
 const WindowPari = (props) =>{
@@ -167,13 +168,27 @@ const BetChoice = ()=>{
     
     function validerPari (e){
         
-        const pari ={}
+        
         
         const selected = document.querySelectorAll(".selected")
         const a =selected[0].innerHTML
-        const b =selected[1].innerHTML     
-        pari[clickedMatch[0].id]=a+"/"+b
-        console.log(pari);
+        const b =selected[1].innerHTML
+        const pari ={
+            "idMatch":clickedMatch[0].id,
+            "result":a+"/"+b
+        }    
+        console.log(pari)
+        const headers = addHeaderJWT()
+        headers.append("Content-Type","application/json")
+        fetch(server + "/paris/post?poule=elim",{
+            
+            method:"put",
+            headers:headers,
+            body:JSON.stringify(pari)
+        })
+        .then(res=>res.json())
+            
+        
         updateCtx(false)
     }
    

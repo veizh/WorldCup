@@ -8,10 +8,10 @@ const Selectbox = (props) =>{
         const [active,setActive] = useState(false)
         const [settings,setSettings] = useState(undefined)
 
-        const getSettings = () => {
+        const getSettings =async () => {
             const poule = props.option
             console.log(poule);
-            fetch(server +"/equipe/getTeamGroup", {
+            await fetch(server +"/equipe/getTeamGroup", {
                      method:"post",
                      headers:{"Content-Type":"application/json"},
                      body:JSON.stringify({poule})
