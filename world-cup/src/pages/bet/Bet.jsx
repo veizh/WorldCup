@@ -25,8 +25,8 @@ const ListBet = () =>{
                     <Link className={user&&user.pari_f!==null?"done":""} to="./poule/f">Poule F <i className="fa-solid fa-circle-check"></i></Link>
                     <Link className={user&&user.pari_g!==null?"done":""} to="./poule/g">Poule G <i className="fa-solid fa-circle-check"></i></Link>
                     <Link className={user&&user.pari_h!==null?"done":""} to="./poule/h">Poule H <i className="fa-solid fa-circle-check"></i></Link>
-                    <Link className={user&&user.pari_test!==null?"done":""} to="./test">test pre-deployement <i className="fa-solid fa-circle-check"></i></Link>
                     <Link  to="./eliminatoire">Eliminatoires <i className="fa-solid fa-circle-check"></i></Link>
+                    <Link className={user&&user.pari_bonus!==null?"done":""} to="./bonus">Bonus <i className="fa-solid fa-circle-check"></i></Link>
                 </div>
             </>   
     )

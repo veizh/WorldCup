@@ -5,7 +5,8 @@ import Header from "../../../components/header/_Header"
 import { addHeaderJWT } from "../../../utils/header"
 import { UserCtx } from "../../../App"
 import { Navigate, useNavigate, useParams } from "react-router-dom";
-  function FormPouleTest(props) {
+import "./bonus.css"
+  function FormBonus(props) {
     const [user] = useContext(UserCtx)
     const poule =useParams()
     const [createPari,setPari] = useState(undefined)
@@ -19,35 +20,35 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
 
     useEffect( ()=>{
         if(clicked===null) return
-        const data = document.querySelectorAll('.containerPari');
         
+        let ArrayResult = []
+        let inputs = document.querySelectorAll('.inputBonus')
         let test = 0
-        let tmp = {}
-        data.forEach((e)=>{
-            
-            tmp[e.dataset.id]=e.dataset.selected
-            if(e.dataset.selected===undefined){
-                test = 1
+       
+        console.log(inputs);
+        inputs.forEach((e)=>{
+            if(e.value===""){
+                return test=1
             }
-            if(e.dataset.selected){
-                test = test +1
-                
-            }
+             let tmp = {}
+            tmp["id"]=e.name
+            tmp["result"]=e.value
+            ArrayResult.push(tmp)
         })
-        console.log(tmp);
-        if(test===1) return alert("Veuillez remplir tout les matchs")
-        if(test===4){const headers = addHeaderJWT()
-        headers.append("Content-Type","application/json")
-        fetch(server + "/paris/post?poule="+"test",{
+        if (test===1)return alert('Il manque des réponses')
+        console.log(ArrayResult);
+        
+          const headers = addHeaderJWT()
+           headers.append("Content-Type","application/json")
+           fetch(server + "/paris/post?poule="+"bonus",{
+               
+               method:"put",
+               headers:headers,
+               body:JSON.stringify(ArrayResult)
+           })
+           .then(res=>res.json())
             
-            method:"put",
-            headers:headers,
-            body:JSON.stringify(tmp)
-        })
-        .then(res=>res.json())
-        Navigate('/bet')
-            
-        }
+        
         
         
         
@@ -99,14 +100,21 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
                 <Header></Header>
                 <div className="bgBet"></div>
                 <div className="col">
-                <label htmlFor="Bestplayer">Quel joueur marquera le plus de buts selon vous ?</label>
-                <input type="text" name="bestPlayer" placeholder="Mbappe" />
+                    <div className="bonus">
+                        <h1> Ces paris permettrons de departager les gagnants en cas d'égalité parfaite sinon ils ne rentreront pas en compte dans le classement ! </h1>
+                        <label className="labelBonus" htmlFor="Bestplayer">Quel joueur marquera le plus de buts selon vous ?</label>
+                        <input className="inputBonus" type="text" name="bestPlayer" placeholder="Mbappe" />
+                        <label className="labelBonus" htmlFor="bestPlayergoals">Combien de buts marqués par le meilleur joueur de la compétition ?</label>
+                        <input className="inputBonus" type="text" name="bestPlayergoals" placeholder="7" />
+                        <label className="labelBonus" htmlFor="nbGoals">Combien de buts marqués au total dans la compétition ?</label>
+                        <input className="inputBonus" type="text" name="nbGoals" placeholder="103" />
                 
                 
-                    <button className="send" onClick={pushBdd}>Envoyer </button>
+                        <button className="send" onClick={pushBdd}>Envoyer </button>
+                    </div>
                 </div>
             </>
     )
             
 }
-export default FormPouleTest
+export default FormBonus

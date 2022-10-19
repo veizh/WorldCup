@@ -18,7 +18,7 @@ const Post = (props) => {
         console.log(e.closest(".post"))
     }*/
    const date =new Date(props.date/1000).toLocaleDateString("fr")
-   
+ 
     return   <div className={`post ${Ar?"open":""}`}  >
                     
                         <h2 className="title">{props.title}</h2>

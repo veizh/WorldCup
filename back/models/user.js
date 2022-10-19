@@ -15,8 +15,8 @@ var userSchema = mongoose.Schema({
     pari_f:{type:Object ,default:null},
     pari_g:{type:Object ,default:null},
     pari_h:{type:Object ,default:null},
-    pari_test:{type:Object ,default:null},
-    pari_elim:{type:Object,default:{}},
+    pari_bonus:{type:Object ,default:null},
+    pari_elim:{type:Array,default:{}},
     point:{type:Number, default:0},
     admin:{type:Boolean, default:false}
     })

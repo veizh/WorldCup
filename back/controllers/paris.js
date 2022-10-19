@@ -18,28 +18,30 @@ exports.postParis = async (req,res) =>
     const pari = "pari_" + req.query.poule
     const obj = { }
     obj[pari]= bet
-    
-    if(req.query.poule==="elim"){
-        let user = await usersSchema.find({_id:userId})
-        let ParielimArray = user[0].pari_elim
-        console.log(ParielimArray);
-        const re = ParielimArray.find(e => e.idMatch === bet.idMatch)
-        console.log(re);
-        if(re){
-            await usersSchema.updateOne({_id:userId},{$set:{}})
-            console.log("ecraser");
-            return res.status(200).json({msg:"ecraser"})
-        }
-        if(!re){
-            await usersSchema.updateOne({_id:userId},{$addToSet:obj})
-            console.log("creer");
-            return res.status(200).json({msg:"creer"})
-        }
-
-
-        return res.status(200).json(obj)
+    if(req.body.poule==="bonus") {
+        console.log("working");
     }
-    
+   //if(req.query.poule==="elim"){
+   //    let user = await usersSchema.find({_id:userId})
+   //    let ParielimArray = user[0].pari_elim
+   //    console.log(ParielimArray);
+   //    const re = ParielimArray.find(e => e.idMatch === bet.idMatch)
+   //    console.log(re);
+   //    if(re){
+   //        await usersSchema.updateOne({_id:userId},{$set:{}})
+   //        console.log("ecraser");
+   //        return res.status(200).json({msg:"ecraser"})
+   //    }
+   //    if(!re){
+   //        await usersSchema.updateOne({_id:userId},{$addToSet:obj})
+   //        console.log("creer");
+   //        return res.status(200).json({msg:"creer"})
+   //    }
+
+
+   //     return res.status(200).json(obj)
+  //  }
+  //  
    else{
     await usersSchema.updateOne({_id:userId},{$set:obj});
 

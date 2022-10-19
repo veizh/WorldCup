@@ -175,7 +175,9 @@ const BetChoice = ()=>{
         const b =selected[1].innerHTML
         const pari ={
             "idMatch":clickedMatch[0].id,
-            "result":a+"/"+b
+            "result_a":a,
+            "result_b":b
+
         }    
         console.log(pari)
         const headers = addHeaderJWT()
@@ -248,7 +250,4 @@ const PariElim = () =>{
         </AllMatchesCtx.Provider >
     )
 }
-
-
-
 export default PariElim
