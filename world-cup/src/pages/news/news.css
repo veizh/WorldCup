@@ -94,6 +94,17 @@
     display: none;
   }
 }
+.containerPost .post .paragraphe {
+  white-space: pre-wrap;
+}
+.containerPost .post .paragraphe a {
+  color: black;
+}
+.containerPost .post .paragraphe a:hover {
+  color: #ed6e0b;
+  transition: 0.1s;
+  transform: scale(1.02);
+}
 .containerPost .post .title {
   margin-bottom: 25px;
   margin-top: 0;
