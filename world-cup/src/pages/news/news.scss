@@ -90,7 +90,8 @@
                 }
             }
             .paragraphe{
-                white-space:pre-wrap;
+                white-space:pre-line;
+                
                 a{
                     color: black;
                     &:hover{

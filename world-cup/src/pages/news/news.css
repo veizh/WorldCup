@@ -95,7 +95,7 @@
   }
 }
 .containerPost .post .paragraphe {
-  white-space: pre-wrap;
+  white-space: pre-line;
 }
 .containerPost .post .paragraphe a {
   color: black;
