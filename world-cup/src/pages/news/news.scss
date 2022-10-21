@@ -93,11 +93,11 @@
                 white-space:pre-line;
                 
                 a{
-                    color: black;
+                    color: black;transition: 0.2s;
                     &:hover{
                         color: #ed6e0b;
-                        transition: 0.1s;
-                        transform: scale(1.02);
+                        
+                        font-size: 20px;
                     }
                 }
             }

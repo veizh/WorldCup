@@ -99,11 +99,11 @@
 }
 .containerPost .post .paragraphe a {
   color: black;
+  transition: 0.2s;
 }
 .containerPost .post .paragraphe a:hover {
   color: #ed6e0b;
-  transition: 0.1s;
-  transform: scale(1.02);
+  font-size: 20px;
 }
 .containerPost .post .title {
   margin-bottom: 25px;
