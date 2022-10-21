@@ -22,7 +22,7 @@ const Post = (props) => {
     return   <div className={`post ${Ar?"open":""}`}  >
                     
                         <h2 className="title">{props.title}</h2>
-                        <div className="msg"><p dangerouslySetInnerHTML={{__html:props.desc}}></p></div>
+                        <div className="msg"><p className="paragraphe" dangerouslySetInnerHTML={{__html:props.desc}}></p></div>
                     <div className="date">{date}</div>
                     {<button className="suite" 
                     

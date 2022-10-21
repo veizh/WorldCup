@@ -89,7 +89,17 @@
                     display: none;
                 }
             }
-            
+            .paragraphe{
+                white-space:pre-wrap;
+                a{
+                    color: black;
+                    &:hover{
+                        color: #ed6e0b;
+                        transition: 0.1s;
+                        transform: scale(1.02);
+                    }
+                }
+            }
             .title{
                 margin-bottom: 25px;
             margin-top: 0;
