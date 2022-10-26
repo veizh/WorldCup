@@ -36,9 +36,9 @@ const Selectbox = (props) =>{
             setActive(false)
              setActiveSelection(e);
         }
+        const re = false
 
-
-
+        
          /* Recuperer les equipes probable de selectionner a l'endroit x et l'instant t */ 
 
     return (
@@ -47,9 +47,23 @@ const Selectbox = (props) =>{
 
                 <div className="select-box">
                     <div className={ active?'options-container active':'options-container'}>
-                        {settings?settings.map(e=><div key={e.equipe} onClick={()=>{labelSelected(e.equipe)}} className="option" id={e.equipe}>
+                        {settings?settings.map((e) =>{
+                            console.log(e.equipe === props.memory);
+                            if(e.equipe === props.memory){
+                        return <div key={e.equipe} onClick={()=>{labelSelected(e.equipe)}} className="option memory" id={e.equipe}>
+                                <input type="radio" className="radio" name={e.equipe} id={e.equipe}/>
+                                <label  className={re?"option memory":"option"}htmlFor={e.equipe}>{e.equipe}</label>  </div>
+
+                            }
+                            else{  
+                           return <div key={e.equipe} onClick={()=>{labelSelected(e.equipe)}} className="option" id={e.equipe}>
                             <input type="radio" className="radio" name={e.equipe} id={e.equipe}/>
-                             <label htmlFor={e.equipe}>{e.equipe}</label>  </div>):false}
+                             <label  className={re?"option memory":"option"}htmlFor={e.equipe}>{e.equipe}</label>  </div>
+
+                            }
+                          
+                            })
+                        :false}
                         
                     </div>
                 </div> 

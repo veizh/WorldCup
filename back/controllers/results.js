@@ -1,6 +1,7 @@
 const { json } = require("body-parser")
 const ResultSchema = require("../models/results")
 const ResultElimSchema = require("../models/resultsElim")
+const user = require("../models/user")
 
 const userSchema = require("../models/user")
 exports.createResult = async (req,res)=>{
@@ -11,7 +12,6 @@ exports.createResult = async (req,res)=>{
    
     const result =  req.body
      const tmp = result.idMatch
-    
     players.map( async (e)=>{
        
         console.log("user : " +e._id);
@@ -58,13 +58,22 @@ exports.createResultElim = async(req,res)=>{
         console.log("user : " +e._id);
         const test = tableau.find(i => (i.idMatch).toString() === newResult.idMatch)
         console.log(test);
+        let newPoint = e.point
+        console.log(e.point);
         if(tableau.find(i => (i.idMatch).toString() === newResult.idMatch)){
             if(test.result_a===newResult.result_a){
-              console.log("gagne A soit point/2 ");
+              newPoint = newPoint + newResult.point
+              console.log("gagne A et gagne " + newResult.point);
+              
             }
             if(test.result_b===newResult.result_b){
-              console.log("gagne B soit point/2");
+             
+              newPoint = newPoint + newResult.point 
+              console.log("gagne B et gagne " +newResult.point);
             }
+             await userSchema.updateOne({_id:e._id},{$set:{point:newPoint}})
+            console.log("Apres mise a jour l'user à: "+newPoint +" points.");
+            return res.status(200).json()
         }
         else{
         return  

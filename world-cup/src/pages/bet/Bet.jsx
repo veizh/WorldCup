@@ -27,7 +27,7 @@ const ListBet = () =>{
                     <Link  className={user&&user.pari_elim.length===15?"done":""} to="./eliminatoire">Eliminatoires <i className="fa-solid fa-circle-check"></i></Link>
                     <Link  className={user&&user.pari_vainqueurs!==null?"done":""}  to="./Vainqueurs">Vainqueurs <i className="fa-solid fa-circle-check"></i></Link>
 
-                    <Link className={user&&user.pari_bonus!==null?"done":""} to="./bonus">Bonus <i className="fa-solid fa-circle-check"></i></Link>
+                    <Link className={user&&user.pari_bonus!==null?"done":""} to="./bonus">Questions subsidiaires <i className="fa-solid fa-circle-check"></i></Link>
                 </div>
             </>   
     )
@@ -44,9 +44,3 @@ const Bet = () => {
 
 export default Bet
 
-/*<div className="col">
-            <PariPoule a="france" b="espagne"/>
-            <PariPoule a="Portugal" b="Lithuanie"/>
-            <PariPoule a="suisse" b="Suede"/>
-            <PariPoule a="USA" b="Angleterre"/>
-           </div>*/

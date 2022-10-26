@@ -16,24 +16,18 @@ const Rules = () => {
                                 - Les pronostics de tous les matchs sont rendus en même temps avant le match d'ouverture.<br/>
                                 - Un pronostic validé équivaut un certain nombre de point{"(s)"} selon le stade de la compétition:<br/>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Match de poule : 1 point<br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Match de 1/8 et 1/4 : 2 points<br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Match de 1/2 et finale :<br/>
-                                 Les pronostics ne sont plus modifiables une fois la compétition commencée.
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Matches de 1/8 et ¼ : 2 points par équipes trouvées<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Matches de ½ : 2 points par équipes trouvées<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Matches de la finale : 2 points par équipes trouvées<br/>
+                                 - Les pronostics ne sont plus modifiables une fois la compétition commencée.
                                  <div className="subtitle">Validation des pronostics :</div>  
 
-                                - Les pronosics de la phase de groupe sont au format : 1/N/2 (victoire équipe 1/NUL/victoire équipe 2).<br/>
-                                - Les pronostics de la phase éliminatoire sont au format : 1/2 (victoire équipe 1/victoire équipe 2).<br/>
-                                - Les pronostics sont modifiables jusqu'à la date butoir du :
-                                <div className="subtitle">Bonus :</div> 
-                                - Après la saisie de tous vos pronostics classiques allant du premier match à la finale, vous aurez à
-                                disposition 5 bonus "double-chance" et 5 bonus "compte double" à placer.<br/>
-                                - Le bonus "double-chance" : permet de choisir pour un match deux issues possibles, à savoir la victoire
-                                d'une équipe ou le match nul, n'est applicable qu'en match de poule.<br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exemple : dans un match comme Espagne-Allemagne, si vous voyez l'Espagne l'emporter mais êtes
-                                incertain, si vous placez le bonus vous gagnerez le point même en cas d'égalité.<br/>
-                                - Le bonus "compte double" : double le nombre de point que vous gagnez si le pronostic est validé,
-                                applicable sur tous les matchs de la compétition.<br/>
-                                - Les bonus ne sont pas récupérables après le début de la compétion.<br/>
+                                - Les pronosics de la phase de groupe sont au format : 1/N/2 (victoire équipe 1 / NUL / victoire équipe 2).<br/>
+                                - Phase éliminatoire, on recherche les équipes qui se qualifieront: <br/>
+                                <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Si l'affiche du match est Espagne/Qatar 
+                                <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Et que vous avez mis Angleterre/Qatar vous recevrez 1*2points 
+                                <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mais si vous avez mis Espagne/Qatar vous recevrez 2*2points.<br/><br/>
+                                - Les pronostics sont modifiables jusqu'à la date butoir du : Le 18 Novembre 2022.
                                 <div className="subtitle">Répartition des lots :</div> 
 
                                 - Les lots sont répartis selon 3 phases de la compétition : le classement sur la phase de poule, le

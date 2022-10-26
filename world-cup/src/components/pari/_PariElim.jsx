@@ -4,6 +4,7 @@ import Selectbox from "../select/_Select"
 import './pariElim.css'
 import { server } from '../../utils/servers';
 import { addHeaderJWT } from "../../utils/header";
+import { UserCtx } from "../../App";
 
 
 const WindowPari = (props) =>{
@@ -163,6 +164,7 @@ const ClickedMatchCtx = createContext(null)
 ClickedMatchCtx.displayName = "clickedMatch"
 
 const BetChoice = ()=>{
+    const user = useContext(UserCtx)
     const [ctx,updateCtx] = useContext(MatchCtx)
     const clickedMatch =useContext(ClickedMatchCtx)
     
@@ -192,16 +194,20 @@ const BetChoice = ()=>{
             
         
         updateCtx(false)
+        window.location.reload()
     }
-   
-    
+   let test = null
+   if(user[0].pari_elim.find(e => e.idMatch === clickedMatch[0].id)!==undefined){
+    test = user[0].pari_elim.find(e => e.idMatch === clickedMatch[0].id)
+   }
+    console.log(test)
     return (
         <Modal>
             <div className="containerPairing active">
                 <div className="filtre" >
                     <div className="boxMatch">
-                        <Selectbox name={clickedMatch[0].id} placeholder={clickedMatch[0].placeholder_a} option={clickedMatch[0].option_a}/>
-                        <Selectbox name={clickedMatch[0].id} placeholder={clickedMatch[0].placeholder_b} option={clickedMatch[0].option_b}/>
+                        <Selectbox name={clickedMatch[0].id} placeholder={test===null?clickedMatch[0].placeholder_a:test.result_a} memory={test===null?false:test.result_a} option={clickedMatch[0].option_a}/>
+                        <Selectbox name={clickedMatch[0].id} placeholder={test===null?clickedMatch[0].placeholder_b:test.result_b} memory={test===null?false:test.result_b} option={clickedMatch[0].option_b}/>
                     <button onClick={validerPari}>Valider</button>
                     </div>
                 </div>

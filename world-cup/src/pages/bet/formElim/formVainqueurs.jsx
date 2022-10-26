@@ -17,13 +17,11 @@ const FormVainqueurs = () =>{
     function postResult(){
         const Reponse= document.querySelectorAll('.selected')
         const obj = 
-            {
+        {
          "premier":Reponse[0].innerHTML,
          "deuxieme":Reponse[1].innerHTML,
          "troisieme":Reponse[2].innerHTML,
          "quatrieme":Reponse[3].innerHTML,
-
-
         }
         console.log(obj);
         const headers = addHeaderJWT()
@@ -43,13 +41,13 @@ const FormVainqueurs = () =>{
         <div className="bgBet"></div>
             <div className="col">
                 <h1>Selectionnez les équipes que vous pensez voir a la 1ère, 2ème, 3ème et 4ème place !</h1>
-                <label htmlFor="premier">Quel équipe finira première selon vous ?</label>
+                <label htmlFor="premier">Quelle équipe finira première selon vous ?</label>
                 <Selectbox name="premier" placeholder="Vainqueur" option="all"/>
-                <label htmlFor="deuxime">Quel équipe finira deuxième selon vous ?</label>
+                <label htmlFor="deuxime">Quelle équipe finira deuxième selon vous ?</label>
                 <Selectbox name="deuxime" placeholder="Deuxième" option="all"/>
-                <label htmlFor="troisieme">Quel équipe finira troisième selon vous ?</label>
+                <label htmlFor="troisieme">Quelle équipe finira troisième selon vous ?</label>
                 <Selectbox name="troisieme" placeholder="Troisième" option="all"/>
-                <label htmlFor="quatrieme">Quel équipe finira quatrième selon vous ?</label>
+                <label htmlFor="quatrieme">Quelle équipe finira quatrième selon vous ?</label>
                 <Selectbox name="quatrieme" placeholder="Quatrième" option="all"/>
                 <button className='pushBtn'onClick={postResult}>Envoyer</button>
             </div>

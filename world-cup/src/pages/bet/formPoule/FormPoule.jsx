@@ -110,7 +110,7 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
                 <Header></Header>
                 <div className="bgBet"></div>
                 <div className="col">
-                    <h1>Faites vos paris pour la poule {poule.poule}</h1>
+                    <h1>Faites vos paris pour la poule {poule.poule.toUpperCase()} !</h1>
                 {array.map(e=>{
                    return  <PariPoule a={e.a} 
                         b={e.b} 

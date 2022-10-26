@@ -7,6 +7,11 @@
   color: white;
 }
 
+.memory {
+  background-color: #808080;
+  color: white;
+}
+
 .send {
   border: none;
   margin-top: 5vh;
