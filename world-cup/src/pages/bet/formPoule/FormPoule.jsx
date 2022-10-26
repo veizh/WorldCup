@@ -5,6 +5,8 @@ import Header from "../../../components/header/_Header"
 import { addHeaderJWT } from "../../../utils/header"
 import { UserCtx } from "../../../App"
 import { Navigate, useNavigate, useParams } from "react-router-dom";
+
+
   function FormPoule(props) {
     const [user] = useContext(UserCtx)
     const poule =useParams()
@@ -14,7 +16,6 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
     function pushBdd(){
         setClicked(clicked+1)
     }
-
    
 
     useEffect( ()=>{
@@ -33,7 +34,6 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
                 
             }
         })
-        console.log(test);
         if(test===1) return alert("Veuillez remplir tout les matchs")
         if(test===6){const headers = addHeaderJWT()
         headers.append("Content-Type","application/json")
@@ -91,15 +91,32 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
                     )
             }
             return finalArray
-    }
+    } 
     const array = findOpponents()
+     if(user){
+        const tmp2 = "pari_"+poule.poule
+        const preset = user[tmp2]
+        for(let i = 0 ; i<array.length;i++){
+            if(preset!==null){
+            array[i].memory = preset[array[i].id]
+
+            }
+        }
+       
+    }
+   
     return (
             <>
                 <Header></Header>
                 <div className="bgBet"></div>
                 <div className="col">
                 {array.map(e=>{
-                   return  <PariPoule a={e.a} b={e.b} id={e.id} key={e.id}/>
+                   return  <PariPoule a={e.a} 
+                        b={e.b} 
+                        id={e.id} 
+                        key={e.id} 
+                        memory={user?e.memory:""}
+                        />
                 })}
                     <button className="send" onClick={pushBdd}>Envoyer </button>
                 </div>

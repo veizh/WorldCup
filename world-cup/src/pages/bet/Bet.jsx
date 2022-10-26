@@ -16,7 +16,7 @@ const ListBet = () =>{
                 <div className="bgBet"></div>
                 <div className="grid">
                     <div className="subtitle">FAITES VOS JEUX !</div>
-                    <div className="subtitle2"><div className="txt">Il vous reste x grilles de pari a remplir !</div></div>
+                    <div className="subtitle2"><div className="txt">“ L'imprévu n'est pas l'impossible, c'est une carte qui est toujours dans le jeu. ”</div></div>
                     <Link className={user&&user.pari_a!==null?"done":""} to="./poule/a">Poule A <i className="fa-solid fa-circle-check"></i></Link>
                     <Link className={user&&user.pari_b!==null?"done":""} to="./poule/b">Poule B <i className="fa-solid fa-circle-check"></i></Link>
                     <Link className={user&&user.pari_c!==null?"done":""} to="./poule/c">Poule C <i className="fa-solid fa-circle-check"></i></Link>
@@ -26,6 +26,8 @@ const ListBet = () =>{
                     <Link className={user&&user.pari_g!==null?"done":""} to="./poule/g">Poule G <i className="fa-solid fa-circle-check"></i></Link>
                     <Link className={user&&user.pari_h!==null?"done":""} to="./poule/h">Poule H <i className="fa-solid fa-circle-check"></i></Link>
                     <Link  to="./eliminatoire">Eliminatoires <i className="fa-solid fa-circle-check"></i></Link>
+                    <Link  to="./Vainqueurs">Vainqueurs <i className="fa-solid fa-circle-check"></i></Link>
+
                     <Link className={user&&user.pari_bonus!==null?"done":""} to="./bonus">Bonus <i className="fa-solid fa-circle-check"></i></Link>
                 </div>
             </>   

@@ -10,7 +10,7 @@ const Selectbox = (props) =>{
 
         const getSettings =async () => {
             const poule = props.option
-            console.log(poule);
+            //console.log(poule);
             await fetch(server +"/equipe/getTeamGroup", {
                      method:"post",
                      headers:{"Content-Type":"application/json"},
@@ -20,7 +20,7 @@ const Selectbox = (props) =>{
                 .then(res => setSettings(res))
             
         }
-        console.log(settings);
+        //console.log(settings);
         if(settings===undefined){
             getSettings()
         }

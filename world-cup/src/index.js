@@ -13,8 +13,11 @@ import Bet from './pages/bet/Bet';
 import FormPoule from './pages/bet/formPoule/FormPoule';
 import PostNews from './pages/Admin/PostNews';
 import PostResults from './pages/Admin/PostResults';
+import PostResultElim from './pages/Admin/PostresultElim';
+
 import FormElim from './pages/bet/formElim/formElim';
 import FormBonus from './pages/bet/formPoule/FormBonus';
+import FormVainqueurs from './pages/bet/formElim/formVainqueurs';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
@@ -35,6 +38,9 @@ root.render(
             <Route path="/Bet/bonus" element={<FormBonus />} />
             <Route path="/News" element={<News />} />
             <Route path="/Rating" element={<Rating />} />
+            <Route path="/Bet/Vainqueurs" element={<FormVainqueurs />} />
+            <Route path="/Admin/PostResultElim" element={<PostResultElim />} />
+
           </Routes>
       </App>
     </Router>

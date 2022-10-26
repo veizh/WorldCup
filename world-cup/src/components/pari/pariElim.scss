@@ -10,9 +10,51 @@
 }
 .col{
     z-index: 2;
+    align-items: center;
+}
+.container-caution{
+ width: 85%;
+ font-size: 20px;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ align-items: center;
+ fill: #ed6d0b;
+ @include desktop{
+    width: 65%;
+    flex-direction: row;
+ }
+    .txt{
+        color: #ed6d0b;
+        margin-bottom: 20px;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center; 
+        @include desktop{
+            font-size: 24px;
+            font-weight: 600;
+         }
+    }
+    svg{
+        margin: 0 15px;
+        width: 55px;
+        height:55px;
+        margin-bottom: 20px;
+        @include desktop{    
+            width: 100px;
+            height:100px;   
+
+        }
+
+        &.second{
+            display: none;
+            @include desktop{
+                display: block;
+             }
+        }
+    }
 }
 .filtre{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -123,4 +165,7 @@ height: fit-content;
                 font-size: 22px;
              }
     }
+}
+.Finale{
+    margin-bottom: 50px;
 }

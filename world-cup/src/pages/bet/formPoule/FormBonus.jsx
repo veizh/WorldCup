@@ -55,46 +55,7 @@ import "./bonus.css"
         
         
     },[clicked])
-    /*Il faut lui balancer les equipes de la poule en question via le paremetre URl*/
-
   
-   //     if(createPari===undefined){
-   //         fetch(server + "/equipe/getTeamGroup", {
-   //             method:"POST",
-   //             headers:{
-   //                 "Content-Type":"application/json"
-   //             },
-   //             body: JSON.stringify(poule)
-   //         })
-   //             .then(res=>res.json())
-   //             .then(res => setPari(res))
-   //     }
-   //
-   // if(createPari===undefined){
-   //     return (
-   //         <>
-   //         <Header></Header>
-   //             <div className="bgBet"></div>
-   //             <div className="col"><button className="send" onClick={pushBdd}>Envoyer </button>
-   //             </div>
-   //         </>
-   //     )
-   // }
-    //function findOpponents (){
-    //    let tmp = [...createPari]
-//
-    //    const finalArray = []
-    //        for(let i=0 ; i< createPari.length ; i++){
-    //            
-    //            tmp = tmp.filter(a => a!== createPari[i])
-    //            tmp.forEach(e =>
-//
-    //                finalArray.push({"a":e.equipe,"b":createPari[i].equipe,"id": poule.poule + e.equipe+"/"+createPari[i].equipe})
-    //                )
-    //        }
-    //        return finalArray
-    //}
-    //const array = findOpponents()
     return (
             <>
                 <Header></Header>
@@ -103,11 +64,11 @@ import "./bonus.css"
                     <div className="bonus">
                         <h1> Ces paris permettrons de departager les gagnants en cas d'égalité parfaite sinon ils ne rentreront pas en compte dans le classement ! </h1>
                         <label className="labelBonus" htmlFor="Bestplayer">Quel joueur marquera le plus de buts selon vous ?</label>
-                        <input className="inputBonus" type="text" name="bestPlayer" placeholder="Mbappe" />
+                        <input className="inputBonus" type="text" name="bestPlayer" placeholder="Ex: Mbappe" />
                         <label className="labelBonus" htmlFor="bestPlayergoals">Combien de buts marqués par le meilleur joueur de la compétition ?</label>
-                        <input className="inputBonus" type="text" name="bestPlayergoals" placeholder="7" />
+                        <input className="inputBonus" type="text" name="bestPlayergoals" placeholder="Ex: 7" />
                         <label className="labelBonus" htmlFor="nbGoals">Combien de buts marqués au total dans la compétition ?</label>
-                        <input className="inputBonus" type="text" name="nbGoals" placeholder="103" />
+                        <input className="inputBonus" type="text" name="nbGoals" placeholder="Ex: 103" />
                 
                 
                         <button className="send" onClick={pushBdd}>Envoyer </button>

@@ -10,16 +10,17 @@
 }
 .send{
   border: none;
-  border-radius: 8px;
   margin-top: 5vh;
   height: 50px;
   font-size: 25px;
   width: 50%;
   margin:  5vh auto;
+  color: #ed6d0b;
+  font-family: 'Montserrat', sans-serif;
   cursor: pointer;
   transition: all 0.2s ease-in;
   &:hover{
-    transform: scale(1.05);
+    transform: scale(1.03);
   }
 }
 .containerPari{

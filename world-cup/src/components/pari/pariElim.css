@@ -12,10 +12,59 @@
 
 .col {
   z-index: 2;
+  align-items: center;
+}
+
+.container-caution {
+  width: 85%;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  fill: #ed6d0b;
+}
+@media (min-width: 992px) {
+  .container-caution {
+    width: 65%;
+    flex-direction: row;
+  }
+}
+.container-caution .txt {
+  color: #ed6d0b;
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .container-caution .txt {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+.container-caution svg {
+  margin: 0 15px;
+  width: 55px;
+  height: 55px;
+  margin-bottom: 20px;
+}
+@media (min-width: 992px) {
+  .container-caution svg {
+    width: 100px;
+    height: 100px;
+  }
+}
+.container-caution svg.second {
+  display: none;
+}
+@media (min-width: 992px) {
+  .container-caution svg.second {
+    display: block;
+  }
 }
 
 .filtre {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -130,4 +179,8 @@
   align-items: center;
   font-family: "Montserrat", sans-serif;
   font-size: 22px;
+}
+
+.Finale {
+  margin-bottom: 50px;
 }/*# sourceMappingURL=pariElim.css.map */

@@ -3,6 +3,56 @@
   flex-direction: column;
   row-gap: 2vh;
 }
+.col h1 {
+  color: white;
+  width: 70%;
+  text-align: center;
+  font-size: 27px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.col h1::first-letter {
+  color: #ed6d0b;
+}
+.col .containerSelect {
+  margin-bottom: 25px;
+}
+.col label {
+  padding: 0 20px;
+  font-size: 24px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 15px;
+  color: white;
+}
+.col label::first-letter {
+  color: #ed6d0b;
+}
+.col .option label {
+  color: black;
+}
+
+.pushBtn {
+  width: 90%;
+  border: none;
+  color: #ed6d0b;
+  background-color: white;
+  padding: 10px;
+  font-size: 22px;
+  margin-top: 40px;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.54);
+  cursor: pointer;
+}
+@media (min-width: 992px) {
+  .pushBtn {
+    width: 40%;
+  }
+}
+.pushBtn:hover {
+  transform: scale(1.03);
+}
 
 .bgBet {
   position: fixed;
@@ -54,7 +104,7 @@
   width: 100vw;
   color: #ed6d0b;
   background: rgb(255, 255, 255);
-  background: linear-gradient(90deg, rgba(245, 245, 245, 0) 10%, rgb(245, 245, 245) 30%, rgb(245, 245, 245) 70%, rgba(245, 245, 245, 0) 90%);
+  background: linear-gradient(90deg, rgba(245, 245, 245, 0) 5%, rgb(245, 245, 245) 20%, rgb(245, 245, 245) 80%, rgba(245, 245, 245, 0) 95%);
   font-family: "Montserrat", sans-serif;
   padding: 10px 0 10px 0px;
   font-size: 22px;
@@ -66,7 +116,7 @@
   }
 }
 .grid .subtitle2 .txt {
-  width: 50%;
+  width: 70%;
   text-align: center;
 }
 .grid a {

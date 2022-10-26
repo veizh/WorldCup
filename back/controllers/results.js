@@ -1,4 +1,7 @@
+const { json } = require("body-parser")
 const ResultSchema = require("../models/results")
+const ResultElimSchema = require("../models/resultsElim")
+
 const userSchema = require("../models/user")
 exports.createResult = async (req,res)=>{
     console.log('post recu')
@@ -8,7 +11,7 @@ exports.createResult = async (req,res)=>{
    
     const result =  req.body
      const tmp = result.idMatch
-
+    
     players.map( async (e)=>{
        
         console.log("user : " +e._id);
@@ -42,4 +45,30 @@ exports.createResult = async (req,res)=>{
 
 
 }
+exports.createResultElim = async(req,res)=>{
+  console.log('post recu')
+  
+  const newResult = new ResultElimSchema({...req.body})
+    newResult.save()
+    let players = await userSchema.find()
+   let idMatch = newResult.idMatch
+    players.map( async (e)=>{
+      let tableau = e.pari_elim
+      
+        console.log("user : " +e._id);
+        const test = tableau.find(i => (i.idMatch).toString() === newResult.idMatch)
+        console.log(test);
+        if(tableau.find(i => (i.idMatch).toString() === newResult.idMatch)){
+            if(test.result_a===newResult.result_a){
+              console.log("gagne A soit point/2 ");
+            }
+            if(test.result_b===newResult.result_b){
+              console.log("gagne B soit point/2");
+            }
+        }
+        else{
+        return  
 
+        }
+})
+}
