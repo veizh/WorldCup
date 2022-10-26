@@ -194,7 +194,6 @@ const BetChoice = ()=>{
             
         
         updateCtx(false)
-        window.location.reload()
     }
    let test = null
    if(user[0].pari_elim.find(e => e.idMatch === clickedMatch[0].id)!==undefined){
