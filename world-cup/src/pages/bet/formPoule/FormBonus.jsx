@@ -47,7 +47,7 @@ import "./bonus.css"
                body:JSON.stringify(ArrayResult)
            })
            .then(res=>res.json())
-            
+        Navigate("/bet")    
         
         
         
