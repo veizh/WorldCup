@@ -9,7 +9,6 @@ import { server } from "../../utils/servers";
 
 const ListBet = () =>{
     const [user] = useContext(UserCtx)
-   
     
 
     return (<>
@@ -25,7 +24,7 @@ const ListBet = () =>{
                     <Link className={user&&user.pari_f!==null?"done":""} to="./poule/f">Poule F <i className="fa-solid fa-circle-check"></i></Link>
                     <Link className={user&&user.pari_g!==null?"done":""} to="./poule/g">Poule G <i className="fa-solid fa-circle-check"></i></Link>
                     <Link className={user&&user.pari_h!==null?"done":""} to="./poule/h">Poule H <i className="fa-solid fa-circle-check"></i></Link>
-                    <Link  className={user&&user.pari_elim.length===14?"done":""} to="./eliminatoire">Eliminatoires <i className="fa-solid fa-circle-check"></i></Link>
+                    <Link  className={user&&user.pari_elim.length===15?"done":""} to="./eliminatoire">Eliminatoires <i className="fa-solid fa-circle-check"></i></Link>
                     <Link  className={user&&user.pari_vainqueurs!==null?"done":""}  to="./Vainqueurs">Vainqueurs <i className="fa-solid fa-circle-check"></i></Link>
 
                     <Link className={user&&user.pari_bonus!==null?"done":""} to="./bonus">Bonus <i className="fa-solid fa-circle-check"></i></Link>
