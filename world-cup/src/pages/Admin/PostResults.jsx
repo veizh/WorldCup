@@ -20,6 +20,8 @@ const handleSubmit =  (e) => {
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify(values)
         })
+
+    alert("c'est okayyyyyyyyyyyyyy")
         
         
        // Navigate('/rating')
