@@ -7,7 +7,6 @@ exports.SignIn = async (req,res) => {
 
     const authorizedEmail =[
         "maximedurville95300@gmail.com",
-        "admin@admin.com",
         "fx.matignon@gmail.com",
         "christine.matignon78@gmail.com",
         "a.germany@ag-consulting-expertise.fr",
@@ -56,7 +55,28 @@ exports.SignIn = async (req,res) => {
 "yannick.le-luduec@dalkia.fr",
 "heufgb@gmail.com",
 "eric.courtade@orange.fr",
-"eric.fosse@siaap.fr"
+"eric.fosse@siaap.fr",
+"benoit.bartiaux@suez.com",
+"nanie.gweg@outlook.fr",
+"leroytom@hotmail.fr",
+"halim.aichaoui@suez.com",
+"william.calmesnil@suez.com",
+"bertrand.maluga@suez.com",
+"thierry.gadioux@suez.com",
+"lilian.crespin@suez.com",
+"nabila.mameri@suez.com",
+"mathieuferon@yahoo.fr",
+"christophe.borges@engie.com",
+"stevendhotel@gmail.com",
+"pat.dacosta27@gmail.com",
+"n.gaboriaud@bmfc.fr",
+"begad.m@bmfc.fr",
+"swerey@semardel.fr",
+"lionel.bresson@suez.com",
+"g.das-neves@ag-consulting-expertise.fr",
+"h.geoffroy@ag-consulting-expertise.fr",
+"a.ali-ridoi@ag-consulting-expertise.fr",
+"c.guizard-galland@ag-consulting-expertise.fr"
     ]
 
     const {email,pseudo, societe,password,confirmPassword}= req.body

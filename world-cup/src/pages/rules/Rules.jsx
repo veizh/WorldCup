@@ -37,15 +37,12 @@ const Rules = () => {
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Lot pour le vainqueur général :<br/>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Dans le cas où un participant cumul des victoires sur plusieurs phases, il ne remporte que le lot le plus
                                 important (ou de son choix).
-                                - Voici la liste de l'intégralité des lots :<br/>
                                 <div className="subtitle">Cas d'égalité dans le classement :</div> 
                                 - Les participants éligibles à un lot ayant le même nombre de points à la fin de la compétition sont
                                 départagés de la manière suivante :<br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Phase de poule :<br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Phase éliminatoire :<br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Classement global :<br/>
-                                Idées : Le participant avec le plus grand nombre de bons pronostics ? Avoir trouvé le vainqueur de la
-                                compétition ? Question sur le meilleur buteur ? Sur l'équipe qui marque le plus ? Question spéciale ?</div> 
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Phase de poule : Quel joueur marquera le plus de buts selon vous ?<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Phase éliminatoire : Combien de buts marqués par le meilleur joueur de la compétition ?<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Classement global : Combien de buts marqués au total dans la compétition ?<br/></div> 
                         
                     </div> 
             </>    

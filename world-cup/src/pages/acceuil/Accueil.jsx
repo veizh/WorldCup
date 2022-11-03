@@ -6,7 +6,7 @@ import './accueil.css'
 export const Header = () => {
     return(
         <>
-            <NavButton name="Actualité" link="/News"/>
+            <NavButton name="Actualités" link="/News"/>
             <NavButton name="Classement" link="/Rating" />
             <NavButton name="Jouer" link="/Bet" />
             <NavButton name="Règles du jeu" link="/Rules" />

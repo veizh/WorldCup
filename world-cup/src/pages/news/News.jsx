@@ -40,7 +40,7 @@ const News = () => {
                 <Header />
                 <div className="backgroundNews"></div>
                 <div className="containerPost">
-                    <h1>L'info sur la coupe du monde</h1>
+                    <h1>Les infos sur la coupe du monde</h1>
                     <PostFetched />
 
 

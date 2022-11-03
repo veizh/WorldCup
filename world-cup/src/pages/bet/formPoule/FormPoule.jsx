@@ -24,7 +24,6 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
         let test = 0
         let tmp = {}
         data.forEach((e)=>{
-            
             tmp[e.dataset.id]=e.dataset.selected
             if(e.dataset.selected===undefined){
                 test = 1

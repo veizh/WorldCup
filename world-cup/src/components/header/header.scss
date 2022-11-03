@@ -25,7 +25,7 @@ header{
         text-decoration: none;
         @include tablet{
             &::after{
-                content: 'Acceuil';
+                content: 'Accueil';
                 font-family: 'Montserrat', sans-serif;
                 margin-left: 15px;
             }
