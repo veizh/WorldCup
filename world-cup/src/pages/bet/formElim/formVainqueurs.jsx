@@ -48,7 +48,7 @@ const FormVainqueurs = () =>{
         <Header></Header>
         <div className="bgBet"></div>
             <div className="col">
-                <h1>Selectionnez les équipes que vous pensez voir a la 1ère, 2ème, 3ème et 4ème place !</h1>
+                <h1>Selectionnez les équipes que vous pensez voir à la 1ère, 2ème, 3ème et 4ème place !</h1>
                 <label htmlFor="premier">Quelle équipe finira première selon vous ?</label>
                 <Selectbox name="premier" placeholder={test !== null?test.premier:"Vainqueur"} option="all"/>
                 <label htmlFor="deuxime">Quelle équipe finira deuxième selon vous ?</label>

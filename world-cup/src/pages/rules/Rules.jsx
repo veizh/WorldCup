@@ -22,7 +22,7 @@ const Rules = () => {
                                  - Les pronostics ne sont plus modifiables une fois la compétition commencée.
                                  <div className="subtitle">Validation des pronostics :</div>  
 
-                                - Les pronosics de la phase de groupe sont au format : 1/N/2 (victoire équipe 1 / NUL / victoire équipe 2).<br/>
+                                - Les pronostics de la phase de groupe sont au format : 1/N/2 (victoire équipe 1 / NUL / victoire équipe 2).<br/>
                                 - Phase éliminatoire, on recherche les équipes qui se qualifieront: <br/>
                                 <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Si l'affiche du match est Espagne/Qatar 
                                 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Et que vous avez mis Angleterre/Qatar vous recevrez 1*2points 

@@ -76,7 +76,29 @@ exports.SignIn = async (req,res) => {
 "g.das-neves@ag-consulting-expertise.fr",
 "h.geoffroy@ag-consulting-expertise.fr",
 "a.ali-ridoi@ag-consulting-expertise.fr",
-"c.guizard-galland@ag-consulting-expertise.fr"
+"c.guizard-galland@ag-consulting-expertise.fr",
+"calanca.david@gmail.com",
+"moukaddimkawtar@gmail.com",
+"alvaro.coelho95@gmail.com",
+"mrs91200@gmail.com",
+"charlotte.tyssandier@veolia.com",
+"stephane.piedallu@veolia.com",
+"samuel.ballenghien@veolia.com",
+"franck.allexandre@icloud.com",
+"contact@berrad.fr",
+"jerome.michel2@veolia.com",
+"dunas.pascal@wanadoo.fr",
+"jerome.rey@dalkia.fr",
+"didier.valet@dalkia.fr",
+"mustapha.fassi@dalkia.fr",
+"maximilien.valentin@dalkia.fr",
+"widady55@yahoo.fr",
+"cyril.segarra@apave.com",
+"aurelien.grimault@apave.com",
+"cedrick.james@sedibex.fr",
+"sandrine.cressent@suez.com",
+
+        
     ]
 
     const {email,pseudo, societe,password,confirmPassword}= req.body

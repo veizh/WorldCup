@@ -185,7 +185,7 @@ const Form = ({signIn,logIn}) =>{
             <div className="container-form-bg">
                 <div className='background'></div>
                     <form  >
-                        <div className='subtitle'> Ne restez pas sur le banc ! <br/><br/> Participez à la coupe du monde avec <div className='oranged'>AG-constulting !</div></div>
+                        <div className='subtitle'> Ne restez pas sur le banc ! <br/><br/> Participez à la coupe du monde avec <div className='oranged'>AG constulting !</div></div>
                         <div className='title'>{logIn?'Connexion':'Inscription'}</div>
                         {logIn?<LogIn handleSubmit={handleSubmit} />:<SignIn handleSubmit={handleSubmit} />}   
                         

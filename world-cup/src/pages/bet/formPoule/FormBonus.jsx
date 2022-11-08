@@ -62,7 +62,7 @@ import "./bonus.css"
                 <div className="bgBet"></div>
                 <div className="col">
                     <div className="bonus">
-                        <h1> Ces paris permettrons de departager les gagnants en cas d'égalité parfaite sinon ils ne rentreront pas en compte dans le classement ! </h1>
+                        <h1> Ces paris permettrons de départager les gagnants en cas d'égalité parfaite sinon ils ne rentreront pas en compte dans le classement ! </h1>
                         <label className="labelBonus" htmlFor="Bestplayer">Quel joueur marquera le plus de buts selon vous ?</label>
                         <input className="inputBonus" type="text" name="bestPlayer" placeholder="Ex: Mbappe" />
                         <label className="labelBonus" htmlFor="bestPlayergoals">Combien de buts marqués par le meilleur joueur de la compétition ?</label>
