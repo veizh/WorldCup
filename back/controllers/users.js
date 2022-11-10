@@ -97,9 +97,8 @@ exports.SignIn = async (req,res) => {
 "aurelien.grimault@apave.com",
 "cedrick.james@sedibex.fr",
 "sandrine.cressent@suez.com",
-
-        
-    ]
+"gabriel.ledortz@gmail.com",
+]
 
     const {email,pseudo, societe,password,confirmPassword}= req.body
     /* err */
@@ -128,7 +127,7 @@ exports.LogIn = async (req,res) => {
     if(!email || !password ) return res.status(400).json({err:'Un champ n\'est pas rempli'})
     const user = await userSchema.findOne({email:email})
 
-    if(!user) return res.status(400).json({errNotFind:"l'adressre email n'existe pas"})
+    if(!user) return res.status(400).json({errNotFind:"l'adresse email n'existe pas"})
     const mdpMatch = await bcrypt.compare(password,user.password)
     if(!mdpMatch){
         return res.status(401).json({errNotFind:"le mot de passe n'extiste pas"})
