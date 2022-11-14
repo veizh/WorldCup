@@ -99,6 +99,8 @@ exports.SignIn = async (req,res) => {
 "sandrine.cressent@suez.com",
 "gabriel.ledortz@gmail.com",
 "fares.maad@sedibex.fr",
+"mailto:zx9r92@gmail.com",
+"bruno.provost@free.fr",
 ]
 
     const {email,pseudo, societe,password,confirmPassword}= req.body
