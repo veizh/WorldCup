@@ -104,6 +104,9 @@ exports.SignIn = async (req,res) => {
 "julien.mohier@axeperf.com",
 "laurent.gebeau@axeperf.com",
 "alain.dumonthier@veolia.com",
+"jeanbaptiste.schiavi@paprec.com",
+"ibrahim.diagne@paprec.com",
+"cedric.franche@paprec.com",
 
 ]
 
