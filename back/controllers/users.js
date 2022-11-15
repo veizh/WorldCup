@@ -103,6 +103,8 @@ exports.SignIn = async (req,res) => {
 "bruno.provost@free.fr",
 "julien.mohier@axeperf.com",
 "laurent.gebeau@axeperf.com",
+"alain.dumonthier@veolia.com",
+
 ]
 
     const {email,pseudo, societe,password,confirmPassword}= req.body
