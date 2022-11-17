@@ -108,6 +108,7 @@ exports.SignIn = async (req,res) => {
 "ibrahim.diagne@paprec.com",
 "cedric.franche@paprec.com",
 "bastien.blot@apave.com",
+"aurenath0709@gmail.com"
 
 ]
 
