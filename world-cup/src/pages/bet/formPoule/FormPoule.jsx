@@ -72,7 +72,6 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
             <>
             <Header></Header>
                 <div className="bgBet"></div>
-                
             </>
         )
     }
