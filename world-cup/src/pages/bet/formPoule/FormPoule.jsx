@@ -72,8 +72,7 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
             <>
             <Header></Header>
                 <div className="bgBet"></div>
-                <div className="col"><button className="send" onClick={pushBdd}>Envoyer </button>
-                </div>
+                
             </>
         )
     }
