@@ -57,7 +57,6 @@ const FormVainqueurs = () =>{
                 <Selectbox name="troisieme" placeholder={test !== null?test.troisieme:"Troisième"} option="all"/>
                 <label htmlFor="quatrieme">Quelle équipe finira quatrième selon vous ?</label>
                 <Selectbox name="quatrieme" placeholder={test !== null?test.quatrieme:"Quatrième"} option="all"/>
-                <button className='pushBtn'onClick={postResult}>Envoyer</button>
             </div>
         </>
     )

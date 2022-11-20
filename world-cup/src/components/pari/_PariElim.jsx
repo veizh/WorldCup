@@ -207,7 +207,7 @@ const BetChoice = ()=>{
                     <div className="boxMatch">
                         <Selectbox name={clickedMatch[0].id} placeholder={test===null?clickedMatch[0].placeholder_a:test.result_a} memory={test===null?false:test.result_a} option={clickedMatch[0].option_a}/>
                         <Selectbox name={clickedMatch[0].id} placeholder={test===null?clickedMatch[0].placeholder_b:test.result_b} memory={test===null?false:test.result_b} option={clickedMatch[0].option_b}/>
-                    <button onClick={validerPari}>Valider</button>
+                    
                     </div>
                 </div>
             </div> 

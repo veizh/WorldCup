@@ -71,7 +71,6 @@ import "./bonus.css"
                         <input className="inputBonus" type="text" name="nbGoals" placeholder="Ex: 103" />
                 
                 
-                        <button className="send" onClick={pushBdd}>Envoyer </button>
                     </div>
                 </div>
             </>

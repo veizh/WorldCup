@@ -118,7 +118,6 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
                         memory={user?e.memory:""}
                         />
                 })}
-                    <button className="send" onClick={pushBdd}>Envoyer </button>
                 </div>
             </>
     )
