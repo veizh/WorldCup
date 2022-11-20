@@ -93,9 +93,10 @@
                 white-space:pre-line;
                 
                 a{
-                    color: black;
+                    color: #ed6d0b93;
                     transition: 0.2s;
                     text-decoration: unset;
+                    font-weight:bold;
                     &:hover{
                         color: #ed6e0b;
                     }

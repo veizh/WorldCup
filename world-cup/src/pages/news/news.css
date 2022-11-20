@@ -98,9 +98,10 @@
   white-space: pre-line;
 }
 .containerPost .post .paragraphe a {
-  color: black;
+  color: rgba(237, 109, 11, 0.5764705882);
   transition: 0.2s;
   text-decoration: unset;
+  font-weight: bold;
 }
 .containerPost .post .paragraphe a:hover {
   color: #ed6e0b;
