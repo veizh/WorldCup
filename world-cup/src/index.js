@@ -14,7 +14,7 @@ import FormPoule from './pages/bet/formPoule/FormPoule';
 import PostNews from './pages/Admin/PostNews';
 import PostResults from './pages/Admin/PostResults';
 import PostResultElim from './pages/Admin/PostresultElim';
-
+import Stats from './pages/Admin/Stats'
 import FormElim from './pages/bet/formElim/formElim';
 import FormBonus from './pages/bet/formPoule/FormBonus';
 import FormVainqueurs from './pages/bet/formElim/formVainqueurs';
@@ -40,6 +40,8 @@ root.render(
             <Route path="/Rating" element={<Rating />} />
             <Route path="/Bet/Vainqueurs" element={<FormVainqueurs />} />
             <Route path="/Admin/PostResultElim" element={<PostResultElim />} />
+            <Route path="/Admin/stats" element={<Stats />} />
+
 
           </Routes>
       </App>

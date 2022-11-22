@@ -13,4 +13,20 @@
   border-radius: 8px;
   resize: none;
   width: 100%;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.pseudos, .emails {
+  margin: 10vh 2vw;
+  width: 500px;
+  padding: 3vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
 }/*# sourceMappingURL=Post.css.map */
