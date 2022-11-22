@@ -27,10 +27,6 @@ const Stats = () =>{
                 {players?players.map(e=><div key={e._id}> {e.point} </div>):<></>}   
 
             </div>
-            <div className="emails">
-                {players?players.map(e=><div key={e._id}> {e.email} </div>):<></>}   
-
-            </div>
         </div>
     )
 }
