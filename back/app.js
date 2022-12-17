@@ -10,6 +10,7 @@ var postRouter = require('./routes/post');
 var matchRouter = require('./routes/match');
 var parisRouter = require('./routes/paris');
 var resultsRouter = require('./routes/results');
+var commentRouter = require('./routes/comment');
 
 require("dotenv").config();
 
@@ -38,6 +39,8 @@ app.use('/post', postRouter);
 app.use('/match', matchRouter);
 app.use('/paris', parisRouter);
 app.use('/results', resultsRouter);
+app.use('/comment', commentRouter);
+
 
 
 
