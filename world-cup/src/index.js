@@ -18,6 +18,7 @@ import Stats from './pages/Admin/Stats'
 import FormElim from './pages/bet/formElim/formElim';
 import FormBonus from './pages/bet/formPoule/FormBonus';
 import FormVainqueurs from './pages/bet/formElim/formVainqueurs';
+import Book from './pages/book/book';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
@@ -41,6 +42,7 @@ root.render(
             <Route path="/Bet/Vainqueurs" element={<FormVainqueurs />} />
             <Route path="/Admin/PostResultElim" element={<PostResultElim />} />
             <Route path="/Admin/stats" element={<Stats />} />
+            <Route path="/book" element={<Book />} />
 
 
           </Routes>
