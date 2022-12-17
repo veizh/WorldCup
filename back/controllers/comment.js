@@ -1,7 +1,7 @@
 
 const comment = require("../models/comment")
 
-exports.createEquipe = (req,res)=>{
+exports.createComment = (req,res)=>{
     console.log('post recu')
     const newComment = new comment({...req.body})
     newComment.save()
