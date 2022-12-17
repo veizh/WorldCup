@@ -6,7 +6,6 @@ import { server } from '../../utils/servers';
 import { useNavigate } from "react-router-dom";
 const PostMessage = ()=>{
     const [user] = useContext(UserCtx)
-    const Navigate = useNavigate()
     const handleSubmit = () => {
         const comment = {
             pseudo:user.pseudo,
@@ -19,7 +18,7 @@ const PostMessage = ()=>{
             body:JSON.stringify(comment)
         })
         .then(res => res.json({msg:"ok"}))
-        Navigate("/home")
+        return useNavigate("/home")
         /*rediriger aprés le fetch vers news (navigate)*/ 
     }
 
