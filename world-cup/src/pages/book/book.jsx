@@ -4,20 +4,32 @@ import { UserCtx } from "../../App"
 import { useState } from 'react';
 import { server } from '../../utils/servers';
 const PostMessage = ()=>{
+
     const [user] = useContext(UserCtx)
-    function envoieBdd(){
+
+    const handleSubmit = () => {
         const comment = {
             pseudo:user.pseudo,
             content:document.querySelector('textarea').value
         }
-        console.log(comment);
+        console.log(comment)
+        fetch(server +"/comment/create",{
+            method:"POST",
+            headers:{'Content-Type':'application/json' },
+            body:JSON.stringify(comment)
+        })
+        .then(res => res.json({msg:"ok"}))
+        Navigate('/book')
+        /*rediriger aprés le fetch vers news (navigate)*/ 
     }
+
+   
 
     return (
         <div className="containerInput">
             <label htmlFor="comment">Laissez un message sur votre experience de cette coupe du monde avec AG-consulting !</label>
             <textarea htmlFor="comment"></textarea>
-            <button onClick={()=> envoieBdd()}>Envoyer</button>
+            <button onClick={handleSubmit}>Envoyer</button>
         </div>
     )
 }
