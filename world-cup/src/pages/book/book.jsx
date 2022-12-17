@@ -19,7 +19,7 @@ const PostMessage = ()=>{
             body:JSON.stringify(comment)
         })
         .then(res => res.json({msg:"ok"}))
-        Navigate("/book")
+        Navigate("/home")
         /*rediriger aprés le fetch vers news (navigate)*/ 
     }
 
