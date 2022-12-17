@@ -4,5 +4,5 @@ var router = express.Router();
 
 /* GET equipe listing. */
 router.post('/create', commentCtrl.create);
-router.post('/getComments',commentCtrl.getComments)
+router.get('/getComments',commentCtrl.getComments)
 module.exports = router;

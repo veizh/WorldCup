@@ -57,10 +57,11 @@ const Book = ()=>{
         method:"get",
         headers:{"Content-Type":"application/json"}
          })
-         .then(res => res.json())
+         .then(res=>res.json())
          .then(res => {
             setArticles(res)})
     }
+    console.log(articles);
     
     return (<>
         <div className="backgroundNews"></div>

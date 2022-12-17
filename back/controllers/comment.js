@@ -11,7 +11,7 @@ exports.create = (req,res)=>{
 
 exports.getComments= async (req,res)=>{
     const comments = await commentSchema.find()
-
+    console.log(comments);
         return res.status(200).json(comments)
     
 }
