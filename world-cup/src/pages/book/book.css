@@ -5,6 +5,7 @@
   align-items: center;
   width: 90%;
   max-width: 800px;
+  margin-bottom: 40px;
 }
 .containerBook .containerInput {
   width: 100%;
@@ -49,6 +50,7 @@
 }
 .containerArticle .content {
   font-size: 18px;
+  white-space: pre-line;
 }
 .containerArticle .pseudo {
   align-self: flex-end;

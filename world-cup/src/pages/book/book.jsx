@@ -25,21 +25,20 @@ const PostMessage = ()=>{
 
     return (
         <div className="containerInput">
-            <label htmlFor="comment">Laissez un message sur votre experience de cette coupe du monde avec AG-consulting !</label>
+            <label htmlFor="comment">Laissez un message sur votre expérience de cette coupe du monde avec AG-consulting !</label>
             <textarea htmlFor="comment"></textarea>
             <button onClick={handleSubmit}>Envoyer</button>
         </div>
     )
 }
 
-
-const Article = ()=>{
+const Article = (props)=>{
 
     return (
         <>
             <div className="containerArticle">
-                <div className="content">message sur votre experience de cette  message sur votre experience de cette  message sur votre experience de cette message sur votre experience de cette </div>
-                <div className="pseudo">lax</div>
+                <div className="content" dangerouslySetInnerHTML={{__html:props.content}}></div>
+                <div className="pseudo">{props.pseudo}</div>
             </div>
         </>
         
@@ -69,9 +68,7 @@ const Book = ()=>{
             <div className="containerBook">
             <h1 className='subtitlee'>Le livre d'or.</h1>
                 <PostMessage />
-                {//faire un .map des messages et rendre le composant Article
-}
-                <Article />
+                {articles&&articles.map((e)=><Article pseudo={e.pseudo} content={e.content} key={e.content}/>)}
             </div>
             </>
     )

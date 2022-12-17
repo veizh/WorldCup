@@ -9,7 +9,9 @@ export const Header = () => {
             <NavButton name="Actualités" link="/News"/>
             <NavButton name="Classement" link="/Rating" />
             <NavButton name="Jouer" link="/Bet" />
+            <NavButton name="Livre d'or" link="/book" />
             <NavButton name="Règles du jeu" link="/Rules" />
+
         </>
     )
 }

@@ -5,6 +5,7 @@
     align-items: center;
     width: 90%;
     max-width: 800px;
+    margin-bottom: 40px;
     .containerInput{
         width: 100%;
         background-color: white;
@@ -49,6 +50,7 @@
     gap: 20px;
     .content{
         font-size: 18px;
+        white-space: pre-line;
     }
     .pseudo{
         align-self: flex-end;

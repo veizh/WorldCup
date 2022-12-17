@@ -9,8 +9,8 @@ exports.create = (req,res)=>{
         return res.status(200).json({msg:"equipe created"})
 }
 
-exports.getComments= async (req,res)=>{
-    const comments = await commentSchema.find()
+exports.getComments=  (req,res)=>{
+    const comments =  commentSchema.find()
     console.log(comments);
         return res.status(200).json(comments)
     
