@@ -4,7 +4,6 @@ import { UserCtx } from "../../App"
 import { useState } from 'react';
 import { server } from '../../utils/servers';
 const PostMessage = ()=>{
-
     const [user] = useContext(UserCtx)
 
     const handleSubmit = () => {
@@ -19,7 +18,6 @@ const PostMessage = ()=>{
             body:JSON.stringify(comment)
         })
         .then(res => res.json({msg:"ok"}))
-        Navigate('/book')
         /*rediriger aprés le fetch vers news (navigate)*/ 
     }
 
