@@ -12,7 +12,7 @@ const PostMessage = ()=>{
             content:document.querySelector('textarea').value
         }
         console.log(comment)
-        fetch(server +"/comment/create",{
+        fetch(server +"/comments/create",{
             method:"POST",
             headers:{'Content-Type':'application/json' },
             body:JSON.stringify(comment)
@@ -53,7 +53,7 @@ const Book = ()=>{
     const [articles,setArticles]=useState(undefined)
 
     if(articles===undefined){
-         fetch(server + "/comment/getComments", {
+         fetch(server + "/comments/getComments", {
         method:"get",
         headers:{"Content-Type":"application/json"}
          })
